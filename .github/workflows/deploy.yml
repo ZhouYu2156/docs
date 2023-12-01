@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: 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
-          REPOSITORY_NAME: zhouyu2156/docs
+          ACCESS_TOKEN: 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
+          REPOSITORY_NAME: ZhouYu2156/docs
           BRANCH: master
           FOLDER: dist
