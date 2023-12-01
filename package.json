@@ -1,0 +1,21 @@
+{
+  "name": "doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@documate/documate": "^0.2.1",
+    "vitepress": "^1.0.0-rc.30"
+  },
+  "dependencies": {
+    "@documate/vue": "^0.3.1"
+  }
+}
