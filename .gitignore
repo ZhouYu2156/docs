@@ -3,6 +3,7 @@
 # .vitepress 缓存文件
 /node_modules/.vitepress/cache/**
 /node_modules/.vitepress/cache/**
+./node_modules/.vitepress/cache
 # 忽略 .idea 下的文件
 .idea/
 # 忽略 .vscode 下的文件
