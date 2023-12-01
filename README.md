@@ -2,7 +2,7 @@
 
 ## Introduction
 > This is a Notes Projects built by VitePress.
-> This is a Developping Project...
+> This is a Developping Project..
 
 
 ## 下载这个项目
