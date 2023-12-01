@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: "极客兔",
+  base: '/geek/',
   description: "一心创作优质内容,你学习路上的笔记好帮手...",
   lastUpdated: true,
   locales: {
