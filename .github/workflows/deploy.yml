@@ -29,4 +29,4 @@ jobs:
           ACCESS_TOKEN: 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
           REPOSITORY_NAME: zhouyu2156/docs
           BRANCH: master
-          FOLDER: ../dist
+          FOLDER: dist
