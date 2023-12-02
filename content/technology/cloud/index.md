@@ -1,4 +1,4 @@
-# 红帽 8 云计算学习笔记
+<GradientTitle text="红帽 8 云计算学习笔记"/>
 
 > 红帽 8 安装教程博客推荐：https://blog.csdn.net/low5252/article/details/101035853
 

@@ -1,4 +1,4 @@
-export default [
+export const socialLinks = [
     {
       icon: {
         svg: '<img style="width: 20px; border-radius: 20%;" src="/gitee.svg">'

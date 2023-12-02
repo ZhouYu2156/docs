@@ -1,4 +1,4 @@
-export default {
+export const markdown = {
     lineNumbers: true,
     container: {
         tipLabel: '提示',

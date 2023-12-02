@@ -1,4 +1,4 @@
-# Vue技术
+<GradientTitle text="Vue 技术" />
 > 关于Vue的技术文章
 
 ## 1. Vue基础

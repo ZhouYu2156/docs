@@ -1,21 +1,11 @@
 import { defineConfig } from 'vitepress'
-// import { NavItems } from './tree'
-/* 搜索配置 */
-import searchConfig from './configuration/search'
-/* markdown语法相关配置 */
-import markdown from './configuration/markdown'
-/* 社交链接 */
-import socialLinks from './configuration/socialLinks'
-/* 左边侧边栏 */
-import sidebar from './configuration/sidebar'
-/* 顶部导航栏 */
-import nav from './configuration/nav'
+import {searchConfig, markdown, socialLinks, sidebar, nav } from './configuration/index'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
   title: "极客兔",
-  returnTopLabel: '返回顶部',
+  returnTopLabel: '返回顶部', // 手机端才会显示
   // base: '/dist/',
   outDir: './dist',
   description: "一心创作优质内容,你学习路上的笔记好帮手...",

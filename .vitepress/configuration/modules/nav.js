@@ -1,5 +1,5 @@
 // 顶部导航栏
-export default [
+export const nav = [
     /* 首页 */
     {
         text: "首页",
@@ -9,6 +9,10 @@ export default [
     {
         text: '快速开始',
         link: '/content/'
+    },
+    {
+        text: '编程导航',
+        link: '/content/navigation/'
     },
     /* 技术文档 */
     {

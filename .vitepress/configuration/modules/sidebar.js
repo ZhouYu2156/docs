@@ -1,4 +1,4 @@
-export default {
+export const sidebar = {
     '/content/': [
         {
             // 将分类进行汇总
