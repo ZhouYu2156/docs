@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "极客兔 - 笔记站 test123456"
+  name: "极客兔 - 笔记站"
   text: "一心创作优质内容"
   tagline: "铭言: 没有学不会的东西，只是你想不想的问题！"
   image:
