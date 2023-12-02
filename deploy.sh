@@ -12,6 +12,6 @@ set -x  # 这里是为了看错误日志
 git add .
 git commit -m 'auto_deploy'
 
-git pull githubware master
+#git pull githubware master
 # 将打包后的文件推送到指定分支
-git push githubware master
+git push -f githubware master
