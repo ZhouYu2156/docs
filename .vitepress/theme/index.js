@@ -2,6 +2,10 @@
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+// 导入自己的样式
+import './custom.css'
+// 导入组件
+import GradientTitle from './components/GradientTitle.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -13,5 +17,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    // 注册组件
+    app.component('GradientTitle', GradientTitle)
   }
 }

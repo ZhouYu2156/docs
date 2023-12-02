@@ -10,15 +10,15 @@ hero:
     src: /global.png
     atl: 极客兔
   actions:
+    - theme: alt
+      text: 博客
+      link: /blog/
     - theme: brand
       text: 快速开始
-      link: /
+      link: /content/
     - theme: alt
-      text: 个人博客
-      link: /blog/
-    - theme: alt
-      text: 关于作者
-      link: /about/
+      text: 个人简介
+      link: /profile/
 
 features:
   - icon: 📚

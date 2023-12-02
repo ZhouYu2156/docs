@@ -10,3 +10,5 @@ node_modules
 .idea/
 # 忽略 .vscode 下的文件
 .vscode/
+# 忽略dist文件目录
+dist/

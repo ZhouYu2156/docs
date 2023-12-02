@@ -1,0 +1,12 @@
+.text-center {
+    /* 文本内容居中 */
+    text-align: center;
+}
+.w-100 {
+    /* 宽度设置为父元素的 100% */
+    width: 100%;
+}
+.mx-auto {
+    /* 水平方向居中 */
+    margin: 0px auto;
+}

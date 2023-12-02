@@ -1,70 +1,17 @@
----
-layout: doc
-outline-title: 12
-title: markdown语法
-editlink: true
-tags:
- - title: 标题
- - content: 这是正文内容
----
+# 博客
 
-# VitePress 配置 & Markdown 语法
+## 简介
 
+本博客主要记录个人学习过程中的一些笔记，以及一些有趣的东西。
 
-## 锚点{#my-anchor}
-<!-- @include: ./anchor.md -->
+## 目录
 
-## 代码行数显示
-<!-- @include: ./line-numbers.md -->
+- [前端](#前端)
+- [后端](#后端)
+- [数据库](#数据库)
+- [运维](#运维)
+- [其他](#其他)
 
-## Emoji 🎉
-<!-- @include: ./emoji.md -->
+## 前端
 
-## Frontmatter 对象
-<!-- @include: ./frontmatter.md -->
-
-## 容器
-<!--@include: ./container.md-->
-
-## 表格
-<!--@include: ./table.md-->
-
-## 外部代码的粘贴
-::: details 代码如下
-```md
-<<< ./tk.py{1 python}
-```
-:::
-<<< ./tk.py{1 python}
-
-
-
-
-## 下载链接
-::: details
-```md
-[下载链接](./student.json){target="download" download}
-```
-:::
-
-
-## 前端元数据
-::: details
-```md
----
-layout: doc
-title: markdown语法
-editlink: true
-tags:
- - title: 标题
- - content: 这是正文内容
----
-```
-:::
-
-
-<a href="#my-anchor">跳到锚点处</a>
-<br />
-[跳到锚点处](#my-anchor)
-
-[[toc]]
+- [Vue.js 学习笔记]()
