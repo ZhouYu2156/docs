@@ -9,12 +9,20 @@ export default defineConfig({
   // base: '/dist/',
   outDir: './dist',
   description: "一心创作优质内容,你学习路上的笔记好帮手...",
-  lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
   ],
   markdown: markdown,
   themeConfig: {
+    lastUpdated: {
+      text: '上次更新时间'
+    },
+    editLink: {
+      /* 编辑链接1 */
+      // pattern: 'https://github.com/ZhouYu2156/docs/:path',
+      pattern: 'https://github.com/ZhouYu2156/docs/',
+      text: '在 GitHub 上编辑此页'
+    },
     siteTitle: "极 客 兔",      // 网站左上角标题
     // outlineTitle: '笔记大纲',   // 右侧大纲标题
     outline: {

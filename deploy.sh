@@ -2,7 +2,9 @@
 
 set -x  # 这里是为了看错误日志
 # 设置两个环境变量方便等下临时使用
+# 生成环境
 export PRO=git@github.com:ZhouYu2156/zhouyu2156.github.io.git
+# 开发环境
 export DEV=git@github.com:ZhouYu2156/docs.git
 
 # 打包项目
@@ -16,7 +18,7 @@ git push -f githubware master
 
 
 # 进入打包后的文件夹，再推送打包后的 dist 到静态网站展示的仓库中
-cd ${PWD}/dist/
+cd ${PWD}/src/dist/
 # 打包之后，dist目录会被情况，所以重新初始化一下
 git init
 git config user.name "ZhouYu2156"

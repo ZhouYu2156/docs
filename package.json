@@ -1,14 +1,14 @@
 {
   "name": "doc",
-  "version": "1.0.0",
+  "version": "1.2.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src"
   },
-  "keywords": [],
+  "keywords": ["geek", "极客兔", "极客兔 - 笔记站", "编程导航"],
   "author": "",
   "license": "ISC",
   "devDependencies": {

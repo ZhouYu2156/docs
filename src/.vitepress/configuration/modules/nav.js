@@ -1,3 +1,9 @@
+// import {
+//     generatePathList,
+//     generaterRoutes
+// } from '../../utils'
+// import path from 'node:path'
+
 // 顶部导航栏
 export const nav = [
     /* 首页 */
@@ -19,21 +25,35 @@ export const nav = [
         text: '技术文档',
         items: [
             {
-                text: 'Vue',
-                link: '/content/technology/vue/'
+                text: '前端框架',
+                items: [
+                    {
+                        text: 'Vue',
+                        link: '/content/technology/vue/'
+                    },
+                    {
+                        text: 'React',
+                        link: '/content/technology/react/'
+                    },
+                ]
             },
             {
-                text: 'React',
-                link: '/content/technology/react/'
-            },
-            {
-                text: '云计算笔记',
-                link: '/content/technology/cloud/'
-            },
-            {
-                text: 'VitePress',
-                link: '/content/technology/vitepress/'
-            },
+                text: '构建与部署',
+                items: [
+                    {
+                        text: '云计算',
+                        link: '/content/technology/cloud/'
+                    },
+                    {
+                        text: 'VitePress',
+                        link: '/content/technology/vitepress/'
+                    },
+                    {
+                        text: 'Git静态部署',
+                        link: '/content/technology/Git静态部署/'
+                    },
+                ]
+            }
         ]
     },
     /* 学习笔记 */
@@ -53,7 +73,7 @@ export const nav = [
                     },
                     {
                         text: '微机原理',
-                        link: '/content/notes/microprocessor'
+                        link: '/content/notes/microprocessor/'
                     },
                 ]
             },

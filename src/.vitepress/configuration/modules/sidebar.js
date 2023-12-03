@@ -1,3 +1,4 @@
+
 export const sidebar = {
     '/content/': [
         {
@@ -30,6 +31,10 @@ export const sidebar = {
                             text: '计算机组成原理',
                             link: '/content/notes/design/'
                         },
+                        {
+                            text: '常用Git命令清单',
+                            link: '/content/notes/常用Git命令清单/'
+                        },
                     ]
                 },
                 {
@@ -45,12 +50,16 @@ export const sidebar = {
                             link: '/content/technology/react/'
                         },
                         {
-                            text: '云计算笔记',
+                            text: '云计算',
                             link: '/content/technology/cloud/'
                         },
                         {
                             text: 'VitePress',
                             link: '/content/technology/vitepress/'
+                        },
+                        {
+                            text: 'Git静态部署',
+                            link: '/content/technology/Git静态部署/'
                         },
                     ]
                 }
