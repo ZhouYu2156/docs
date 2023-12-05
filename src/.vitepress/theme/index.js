@@ -7,6 +7,7 @@ import './custom.css'
 // 导入组件
 import GradientTitle from './components/GradientTitle.vue'
 import ProgramNavigate from './components/ProgramNavigate.vue'
+import Button from './components/Button/index.vue'
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -20,6 +21,7 @@ export default {
     // ...
     // 注册组件
     app.component('GradientTitle', GradientTitle),
-    app.component('ProgramNavigate', ProgramNavigate)
+    app.component('ProgramNavigate', ProgramNavigate),
+    app.component('Button', Button)
   }
 }

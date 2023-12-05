@@ -35,6 +35,10 @@ export const sidebar = {
                             text: '常用Git命令清单',
                             link: '/content/notes/常用Git命令清单/'
                         },
+                        {
+                            text: 'PythonWeb开发',
+                            link: '/content/notes/PythonWeb开发/'
+                        },
                     ]
                 },
                 {

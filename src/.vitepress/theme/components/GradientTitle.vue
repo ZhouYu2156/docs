@@ -28,7 +28,7 @@ defineProps({
     color: #0000;
     white-space: nowrap;
     background-image: linear-gradient(to right,#09c8ce,#eb2f96);
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 </style>
