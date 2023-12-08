@@ -1,7 +1,4 @@
 import { defineConfig } from 'vitepress'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import {searchConfig, markdown, socialLinks, sidebar, nav } from './configuration/index'
 
 // https://vitepress.dev/reference/site-config
@@ -62,14 +59,5 @@ export default defineConfig({
       message: '极客兔 - 笔记站',
       copyright: 'Copyright © 2023 Created By Zhou Yu.'
     }
-  },
-  /*plugins: [
-    // 配置自动导入
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-    }),
-    Components({
-      resolvers: [ElementPlusResolver()],
-    }),
-  ],*/
+  }
 })
