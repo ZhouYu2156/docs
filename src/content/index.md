@@ -6,6 +6,8 @@ title: 快速开始
 
 ## 一、前言
 
+<el-button type="primary">Primary</el-button>
+
 ::: danger 警告
 警告
 :::

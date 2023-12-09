@@ -28,7 +28,7 @@ export default defineConfig({
     siteTitle: "极 客 兔",      // 网站左上角标题
     returnToTopLabel: "返回顶部", // 手机端才会显示
     lastUpdated: {
-      text: '上次更新时间'
+      text: '最近更新时间'
     },
     editLink: {
       /* 编辑链接1 */
