@@ -44,11 +44,11 @@
     /* 边框样式 */
     --rabbit-border-style: solid;
     /* 块的边框透明度 */
-    --rabbit-info-capcity: 0.86;
-    --rabbit-tip-capcity: 0.8;
-    --rabbit-warning-capcity: 0.8;
-    --rabbit-danger-capcity: 0.85;
-    --rabbit-details-capcity: 0.9;
+    --rabbit-info-capcity: 0.48;
+    --rabbit-tip-capcity: 0.45;
+    --rabbit-warning-capcity: 0.43;
+    --rabbit-danger-capcity: 0.46;
+    --rabbit-details-capcity: 0.42;
     /* 块的边框颜色 */
     --rabbit-info-border-color: rgba(4, 119, 234, var(--rabbit-info-capcity));
     --rabbit-tip-border-color: rgba(46, 214, 130, var(--rabbit-tip-capcity));
@@ -56,31 +56,34 @@
     --rabbit-danger-border-color: rgba(249, 48, 82, var(--rabbit-danger-capcity));
     --rabbit-details-border-color: rgba(90, 102, 113, var(--rabbit-details-capcity));
 }
+
 /* 信息 */
 .custom-block.info {
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-info-border-color);
     background-color: rgba(4, 119, 234, .08);
 }
+
 /* 提示 */
 .custom-block.tip {
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-tip-border-color);
-    /* background-color: rgba(46, 214, 130, .05); */
 }
+
 /* 注意 */
 .custom-block.warning {
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-warning-border-color);
-    /* background-color: rgba(250, 212, 22, .05); */
 }
+
 /* 危险 */
 .custom-block.danger {
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-danger-border-color);
-    /* background-color: rgba(249, 48, 82, .1); */
 }
+
 /* 详情 */
 .custom-block.details {
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-details-border-color);
     background-color: rgba(90, 102, 113, 0.45);
 }
+
 h1 {
     display: inline-block;
     -webkit-background-clip: text;
@@ -89,4 +92,31 @@ h1 {
     white-space: nowrap;
     background-image: linear-gradient(to right,#09c8ce,#eb2f96);
     margin-bottom: 20px
+}
+
+strong {
+    color: #00c1d4
+}
+
+.vp-doc blockquote>p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--vp-c-text-2);
+    transition: color .5s
+}
+
+blockquote {
+    padding: 0 12px;
+    font-weight: 600;
+    // border-top: 3px solid #00c1d4;
+    // border-bottom: 3px solid #00c1d4;
+    border-left: 3px solid #6ee7b7!important;
+    border-right: 3px solid #6ee7b7;
+    border-radius: 6px
+}
+.vp-doc blockquote {
+    margin: 16px 0;
+    border-left: 2px solid var(--vp-c-divider);
+    padding-left: 16px;
+    transition: border-color .5s
 }

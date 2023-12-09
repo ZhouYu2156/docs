@@ -2,7 +2,35 @@
 layout: doc
 title: 我的博客
 ---
-<GradientTitle text="项目介绍"/>
+
+<Button>Primary Button</Button>
+
+**加粗后的样式**
+
+::: code-group
+```vue
+<script setup lang='ts'>
+import {ref} from 'vue'  
+</script>
+
+<template>
+    <div class="display-block w-100vw">
+        <iframe src="/profile.pdf" frameborder="0" class="w-100 h-100vh"></iframe>
+    </div>
+</template>
+
+<style scoped></style>
+```
+
+```json
+"scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+```
+
+:::
 
 # 项 目 说 明
 
@@ -100,8 +128,18 @@ $ npx vitepress init      # 初始化vitepress模板
   },
 ```
 - 启动项目
-```bash
-$ npm run dev
+```vue
+<script setup lang='ts'>
+import {ref} from 'vue'  
+</script>
+
+<template>
+    <div class="display-block w-100vw">
+        <iframe src="/profile.pdf" frameborder="0" class="w-100 h-100vh"></iframe>
+    </div>
+</template>
+
+<style scoped></style>
 ```
 
 ## 项目介绍
