@@ -6,8 +6,9 @@ export default defineConfig({
   lang: 'zh-CN',
   title: "极 客 兔",
   // outlineTitle: '笔记大纲',   // 右侧大纲标题
-  // base: '/dist/',
+  // base: '/',
   outDir: './dist',
+  srcExclude: ['**/README.md', '**/TODO.md'],
   description: "一心创作优质内容,你学习路上的笔记好帮手...",
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],

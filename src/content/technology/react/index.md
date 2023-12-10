@@ -1,4 +1,4 @@
-<GradientTitle text="React 技术栈" />
+# React 技术栈
 
 ## 1. React基础
 

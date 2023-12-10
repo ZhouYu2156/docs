@@ -36,11 +36,10 @@
 
 /* 改写 vitepress 默认主题样式 */
 
-
 /* 重新块的边框 样式 */
 :root {
     /* 边框宽度 */
-    --rabbit-border-width: 1px;
+    --rabbit-border-width: 2px;
     /* 边框样式 */
     --rabbit-border-style: solid;
     /* 块的边框透明度 */
@@ -83,26 +82,32 @@
     border: var(--rabbit-border-width) var(--rabbit-border-style) var(--rabbit-details-border-color);
     background-color: rgba(90, 102, 113, 0.45);
 }
-
+/** 标题渐变色 */
 h1 {
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
     color: #0000;
     white-space: nowrap;
-    background-image: linear-gradient(to right,#09c8ce,#eb2f96);
-    margin-bottom: 20px
+    background-image: linear-gradient(to right, #09c8ce, #eb2f96);
+    margin-bottom: 20px;
+}
+h2 {
+    background: -webkit-linear-gradient(45deg,#42d392 25%,purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 strong {
-    color: #00c1d4
+    color: orange;
 }
 
 .vp-doc blockquote>p {
     margin: 0;
     font-size: 16px;
     color: var(--vp-c-text-2);
-    transition: color .5s
+    transition: color .5s;
 }
 
 blockquote {
@@ -110,13 +115,36 @@ blockquote {
     font-weight: 600;
     // border-top: 3px solid #00c1d4;
     // border-bottom: 3px solid #00c1d4;
-    border-left: 3px solid #6ee7b7!important;
+    border-left: 3px solid #6ee7b7 !important;
     border-right: 3px solid #6ee7b7;
-    border-radius: 6px
+    border-radius: 6px;
 }
+
 .vp-doc blockquote {
     margin: 16px 0;
     border-left: 2px solid var(--vp-c-divider);
     padding-left: 16px;
-    transition: border-color .5s
+    transition: border-color .5s;
 }
+/** 分割线样式 */
+
+.vp-doc hr {
+    border: none;
+    border-top: 1px solid var(--vp-c-divider);
+    margin: 1.8rem 0;
+}
+
+// #region scollbar
+/** utils 滚动条样式 */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #6ee7b7;
+}
+// #endregion scollbar

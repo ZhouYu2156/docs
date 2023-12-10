@@ -1,4 +1,4 @@
-<GradientTitle text="Git 静态部署"/>
+# Git 静态部署
 
 
 ## 一、Github 静态部署

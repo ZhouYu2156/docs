@@ -11,7 +11,7 @@ sidebar: true
 outlineTitle: '在本页中'
 ---
 
-<GradientTitle text="VitePress 配置 & Markdown 语法"/>
+# VitePress 配置 & Markdown 语法
 
 
 ## 锚点{#my-anchor}

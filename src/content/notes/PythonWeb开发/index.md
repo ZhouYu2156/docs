@@ -1,4 +1,4 @@
-<GradientTitle text="PythonWeb笔记"/>
+# PythonWeb笔记
 
 ## 创建 Flask 项目
 

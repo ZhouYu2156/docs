@@ -1,4 +1,4 @@
-<GradientTitle text="常用 Git 命令清单"/>
+# 常用 Git 命令清单
 
 
 
