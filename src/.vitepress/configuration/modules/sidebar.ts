@@ -64,7 +64,7 @@ export const sidebar = {
                         {
                             text: 'Git静态部署',
                             link: '/content/technology/Git静态部署/'
-                        },
+                        }
                     ]
                 }
             ]

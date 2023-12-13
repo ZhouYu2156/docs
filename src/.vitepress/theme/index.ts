@@ -10,6 +10,7 @@ import 'vue-amazing-ui/css'
 import './custom.less'
 // 导入编程导航组件
 import ProfilePDF from './components/ProfilePDF.vue'
+import ProgramNavigate from './components/ProgramNavigate.vue'
 
 export default {
   extends: DefaultTheme,
@@ -22,6 +23,7 @@ export default {
     // ...
     // 注册组件
     app.component('ProfilePDF', ProfilePDF),
+    app.component('ProgramNavigate', ProgramNavigate),
     app.component('VueAmazingUI', VueAmazingUI)
     // 使用插件
     app.use(VueAmazingUI)
