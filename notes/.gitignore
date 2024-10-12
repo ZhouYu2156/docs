@@ -1,0 +1,9 @@
+.vscode/
+.idea/
+dist/
+**/cache/
+**/.temp/
+node_modules/
+
+
+
