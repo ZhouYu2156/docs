@@ -303,7 +303,7 @@ strokeGrid()
 
 - 效果
 
-<img src="./images/canvas栅格.png" width=300 />
+<img src="/pictures/JavaScript/canvas栅格.png" width=300 />
 
 ### 绘制三角形
 
@@ -336,31 +336,31 @@ fillTriangle();
 
 - 效果
 
-<img src="./images/canvas绘制三角形.png" width=300 />
+<img src="/pictures/JavaScript/canvas绘制三角形.png" width=300 />
 
 
 
 ### 内置属性和方法
 
-| 函数名称 | 功能描述 |
-| :----: | :----: |
-| `strokeRect(x, y, width, height)` | 绘制一个矩形的边框 |
-| `fillRect(x, y, width, height)` | 绘制一个填充的矩形 |
-| `clearRect(x, y, width, height)` | 清除指定的矩形区域，然后这块区域会变的完全透明。 |
-| `moveTo(x, y)` | 把画笔移动到指定的坐标`(x, y)`。相当于设置路径的起始点坐标。 |
-| `beginPath()` | 新建一条路径，路径一旦创建成功，图形绘制命令被指向到路径上生成路径 |
-| `closePath()` | **闭合路径。**闭合路径之后，图形绘制命令又重新指向到上下文中。在填充颜色时，需要根据路径的闭合方式进行填充 |
-| `stroke()` | 通过线条来绘制图形轮廓。根据路径绘制描边，前提要设置好描边样式的值(`strokeStyle`) |
-| `fill()` | 通过闭合区域生成实心的图形 |
-| `arc(x, y, radius, startAngle, endAngle)` | 绘制弧形（也是绘制圆的方法） |
-| `fillText()` | 绘制实心文本 |
-| `strokeText()` | 绘制文字轮廓 |
-| `fillStyle` | 设置图形的填充颜色 |
-| `strokeStyle` | 设置图形轮廓的颜色 |
-| `globalAlpha` | 这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。**globalAlpha** 属性在需要绘制大量拥有相同透明度的图形时候相当高效。不过，我认为使用rgba()设置透明度更加好一些。 |
-| `lineWidth` | 线宽。只能是正值。默认是 1.0。 |
-| `lineCap` | 线条末端样式。可选值`butt(线段末端以方形结束)`、`round(线段末端以圆形结束)`、`square(线段末端以方形结束，但是增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。)` |
-| `lineJoin` | `round` 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。 圆角的半径是线段的宽度。`bevel`在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。`miter(默认)`通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。 |
+|                 函数名称                  |                                                                                                                                 功能描述                                                                                                                                 |
+| :---------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|     `strokeRect(x, y, width, height)`     |                                                                                                                            绘制一个矩形的边框                                                                                                                            |
+|      `fillRect(x, y, width, height)`      |                                                                                                                            绘制一个填充的矩形                                                                                                                            |
+|     `clearRect(x, y, width, height)`      |                                                                                                             清除指定的矩形区域，然后这块区域会变的完全透明。                                                                                                             |
+|              `moveTo(x, y)`               |                                                                                                       把画笔移动到指定的坐标`(x, y)`。相当于设置路径的起始点坐标。                                                                                                       |
+|               `beginPath()`               |                                                                                                    新建一条路径，路径一旦创建成功，图形绘制命令被指向到路径上生成路径                                                                                                    |
+|               `closePath()`               |                                                                                **闭合路径。**闭合路径之后，图形绘制命令又重新指向到上下文中。在填充颜色时，需要根据路径的闭合方式进行填充                                                                                |
+|                `stroke()`                 |                                                                                            通过线条来绘制图形轮廓。根据路径绘制描边，前提要设置好描边样式的值(`strokeStyle`)                                                                                             |
+|                 `fill()`                  |                                                                                                                        通过闭合区域生成实心的图形                                                                                                                        |
+| `arc(x, y, radius, startAngle, endAngle)` |                                                                                                                       绘制弧形（也是绘制圆的方法）                                                                                                                       |
+|               `fillText()`                |                                                                                                                               绘制实心文本                                                                                                                               |
+|              `strokeText()`               |                                                                                                                               绘制文字轮廓                                                                                                                               |
+|                `fillStyle`                |                                                                                                                            设置图形的填充颜色                                                                                                                            |
+|               `strokeStyle`               |                                                                                                                            设置图形轮廓的颜色                                                                                                                            |
+|               `globalAlpha`               |                       这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。**globalAlpha** 属性在需要绘制大量拥有相同透明度的图形时候相当高效。不过，我认为使用rgba()设置透明度更加好一些。                        |
+|                `lineWidth`                |                                                                                                                      线宽。只能是正值。默认是 1.0。                                                                                                                      |
+|                 `lineCap`                 |                                                 线条末端样式。可选值`butt(线段末端以方形结束)`、`round(线段末端以圆形结束)`、`square(线段末端以方形结束，但是增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。)`                                                  |
+|                `lineJoin`                 | `round` 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。 圆角的半径是线段的宽度。`bevel`在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。`miter(默认)`通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。 |
 
 
 
@@ -424,7 +424,7 @@ ctx.fillRect(0, 0, 50, 50);
 
 
 
-<img src="./images/canvas坐标变换.jpg" width=300 />
+<img src="/pictures/JavaScript/canvas坐标变换.jpg" width=300 />
 
 - 示例：
 
@@ -454,7 +454,7 @@ translate();
 
 
 
-<img src="./images/canvas坐标系旋转.jpg" width=300 />
+<img src="/pictures/JavaScript/canvas坐标系旋转.jpg" width=300 />
 
 
 
@@ -560,7 +560,7 @@ ctx.fillRect(0, 0, 100, 100);
 
 - 效果
 
-<img src="./images/canvas贝塞尔曲线.png" width=500 />
+<img src="/pictures/JavaScript/canvas贝塞尔曲线.png" width=500 />
 
 - 代码：
 
@@ -645,41 +645,41 @@ ctx.stroke();
 
 
 
-<img src="./images/source-over.jpg" width=500 />
+<img src="/pictures/JavaScript/source-over.jpg" width=500 />
 
 
 
 - `source-in`：仅仅会出现新图像与原来图像重叠的部分，其他区域都变成透明的。(包括其他的老图像区域也会透明)
 
-<img src="./images/source-in.jpg" width=500 />
+<img src="/pictures/JavaScript/source-in.jpg" width=500 />
 
 - `source-out`：仅仅显示新图像与老图像没有重叠的部分，其余部分全部透明。(老图像也不显示)
 
-<img src="./images/source-out.jpg" width=500 />
+<img src="/pictures/JavaScript/source-out.jpg" width=500 />
 
 - `source-atop`：新图像仅仅显示与老图像重叠区域。老图像仍然可以显示。
 
-<img src="./images/source-atop.jpg" width=500 />
+<img src="/pictures/JavaScript/source-atop.jpg" width=500 />
 
 - `destination-over`：新图像会在老图像的下面。
 
-<img src="./images/destination-over.jpg" width=500 />
+<img src="/pictures/JavaScript/destination-over.jpg" width=500 />
 
 - `destination-in`：仅仅新老图像重叠部分的老图像被显示，其他区域全部透明。
 
-<img src="./images/destination-in.jpg" width=500 />
+<img src="/pictures/JavaScript/destination-in.jpg" width=500 />
 
 - `destination-out`：仅仅老图像与新图像没有重叠的部分。 注意显示的是老图像的部分区域。
 
-<img src="./images/destination-out.jpg" width=500 />
+<img src="/pictures/JavaScript/destination-out.jpg" width=500 />
 
 - `destination-atop`：老图像仅仅仅仅显示重叠部分，新图像会显示在老图像的下面。
 
-<img src="./images/destination-atop.jpg" width=500 />
+<img src="/pictures/JavaScript/destination-atop.jpg" width=500 />
 
 - `lighter`：新老图像都显示，但是重叠区域的颜色做加处理
 
-<img src="./images/lighter.jpg" width=500 />
+<img src="/pictures/JavaScript/lighter.jpg" width=500 />
 
 - `darken`：保留重叠部分最黑的像素。(每个颜色位进行比较，得到最小的)
 
@@ -691,7 +691,7 @@ ctx.stroke();
 
 
 
-<img src="./images/darken.jpg" width=500 />
+<img src="/pictures/JavaScript/darken.jpg" width=500 />
 
 - `lighten`：保证重叠部分最量的像素。(每个颜色位进行比较，得到最大的)
 
@@ -703,15 +703,15 @@ ctx.stroke();
 
 
 
-<img src="./images/lighten.jpg" width=500 />
+<img src="/pictures/JavaScript/lighten.jpg" width=500 />
 
 - `xor`：重叠部分会变成透明
 
-<img src="./images/xor.jpg" width=500 />
+<img src="/pictures/JavaScript/xor.jpg" width=500 />
 
 - `copy`：只有新图像会被保留，其余的全部被清除(变透明)
 
-<img src="./images/copy.jpg" width=500 />
+<img src="/pictures/JavaScript/copy.jpg" width=500 />
 
 
 
@@ -727,7 +727,7 @@ ctx.stroke();
 
 :::
 
-<img src="./images/clippath.jpg" width=400 />
+<img src="/pictures/JavaScript/clippath.jpg" width=400 />
 
 
 

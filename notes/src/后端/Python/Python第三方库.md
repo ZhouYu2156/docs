@@ -496,7 +496,7 @@ conda remove -y --name myenv --all
 
 ### 框架图解
 
-![scrapy框架图解](./images/scrapy框架图解.png)
+![scrapy框架图解](/pictures/python_images/scrapy框架图解.png)
 
 > 推荐: [Scrapy 入门参考博客](https://blog.csdn.net/MagicOct/article/details/131065957)
 

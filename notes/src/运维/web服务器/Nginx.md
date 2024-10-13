@@ -7,7 +7,7 @@
 
 ## `Nginx` 工作原理图
 
-![工作原理图](./images/nginx服务工作原理.png)
+![工作原理图](/pictures/Web服务器/nginx服务工作原理.png)
 
 ## 安装
 > 本机安装`nginx`基于`红帽 Centos 7.6` 版本
@@ -62,7 +62,7 @@ $ systemctl daemon-reload                       # 重新加载系统服务配置
 ## `DNS` 域名解析
 > - 利用云解析`DNS服务器`的方式来解析我们本地的`服务器IP`也行，添加一条记录将`域名`指向我们的本地的`服务器IP`。
 
-![dns解析本地服务器ip](./images/dns解析本地服务器ip.png)
+![dns解析本地服务器ip](/pictures/Web服务器/dns解析本地服务器ip.png)
 
 
 ## 核心配置

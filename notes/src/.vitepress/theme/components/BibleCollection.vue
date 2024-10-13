@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
+import { ref } from 'vue';
 const poetries = ref([
     {
         id: 1,
@@ -29,10 +29,12 @@ const poetries = ref([
     <div v-for="item in poetries" :key="item.id" class="poetry-wrapper">
         <h2>{{ item.title }}</h2>
         <div class="poetry-content">
-            <p v-for="photograph in item.children">
-                {{ photograph }}
-                <hr />
-            </p>
+            <div v-for="(photograph, index) in item.children" :key="index">
+                <p>
+                    {{ photograph }}
+                </p>
+                <hr>
+            </div>
         </div>
     </div>
 </template>
@@ -54,7 +56,7 @@ const poetries = ref([
 .poetry-content {
     padding: 5px;
 
-    >p {
+    >div {
         text-indent: 2em;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;

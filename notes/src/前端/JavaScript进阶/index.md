@@ -51,8 +51,8 @@ condition ? 表达式1 : 表达式2;
 :::
 
 :::code-group
-<<< ./code/example.js#objectExpand [对象扩展]
-<<< ./code/example.js#arrayExpand [数组扩展]
+<<< @/public/code/JavaScript/example.js#objectExpand [对象扩展]
+<<< @/public/code/JavaScript/example.js#arrayExpand [数组扩展]
 :::
 
 ## 对象和数组的解构赋值
@@ -62,15 +62,15 @@ condition ? 表达式1 : 表达式2;
 1. 简单解构
 
 ::: code-group
-<<< ./code/example.js#objectSimpleDeconstruct [对象的简单解构]
-<<< ./code/example.js#arraySimpleDeconstruct [数组的简单解构]
+<<< @/public/code/JavaScript/example.js#objectSimpleDeconstruct [对象的简单解构]
+<<< @/public/code/JavaScript/example.js#arraySimpleDeconstruct [数组的简单解构]
 :::
 
 2. 复杂解构
 
 ::: code-group
-<<< ./code/example.js#objectComplexDeconstruct [复杂对象的解构]
-<<< ./code/example.js#arrayComplexDeconstruct [复杂数组对象的解构]
+<<< @/public/code/JavaScript/example.js#objectComplexDeconstruct [复杂对象的解构]
+<<< @/public/code/JavaScript/example.js#arrayComplexDeconstruct [复杂数组对象的解构]
 :::
 
 ## 点链式可选操作符
@@ -81,7 +81,7 @@ condition ? 表达式1 : 表达式2;
 
 :::
 
-<<< ./code/example.js#dotchain
+<<< @/public/code/JavaScript/example.js#dotchain
 
 ## 函数科里化
 
@@ -91,7 +91,7 @@ condition ? 表达式1 : 表达式2;
 
 :::
 
-<<< ./code/example.js#functionCoriolization
+<<< @/public/code/JavaScript/example.js#functionCoriolization
 
 ## 『与』『或』『非』功能
 
@@ -107,17 +107,17 @@ condition ? 表达式1 : 表达式2;
 
 ::: code-group
 
-<<< ./code/example.js#and [与]
+<<< @/public/code/JavaScript/example.js#and [与]
 
-<<< ./code/example.js#or [或]
+<<< @/public/code/JavaScript/example.js#or [或]
 
-<<< ./code/example.js#not [非]
+<<< @/public/code/JavaScript/example.js#not [非]
 :::
 
 ## 移位
 
 <script setup>
-import ShiftBit from '../../../.vitepress/theme/components/ShiftBit.vue'
+import ShiftBit from '/.vitepress/theme/components/ShiftBit.vue'
 </script>
 
 ::: tip 提示：
@@ -134,9 +134,9 @@ import ShiftBit from '../../../.vitepress/theme/components/ShiftBit.vue'
 
 ::: code-group
 
-<<< ./code/example.js#shiftbit1 [算术右移]
+<<< @/public/code/JavaScript/example.js#shiftbit1 [算术右移]
 
-<<< ./code/example.js#shiftbit2 [逻辑右移]
+<<< @/public/code/JavaScript/example.js#shiftbit2 [逻辑右移]
 
 :::
 
@@ -150,7 +150,7 @@ import ShiftBit from '../../../.vitepress/theme/components/ShiftBit.vue'
 
 :::
 
-<<< ./code/example.js#xor
+<<< @/public/code/JavaScript/example.js#xor
 
 ## 函数参数
 
@@ -185,7 +185,7 @@ Vue({
 });
 ```
 
-![函数参数接收问题](/pictures/jspictures/函数参数接收问题.png)
+![函数参数接收问题](/pictures/JavaScript/函数参数接收问题.png)
 
 ## 隐藏的中文编程
 
@@ -273,7 +273,7 @@ function randint(min, max) {
 }
 ```
 
-![文字描边](/pictures/jspictures/文字描边.png)
+![文字描边](/pictures/JavaScript/文字描边.png)
 
 ## 伸缩盒
 

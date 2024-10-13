@@ -510,17 +510,17 @@ export default App;
 ### 列表渲染
 
 :::code-group
-<<< ./code/列表渲染/App.js{12}
-<<< ./code/列表渲染/index.js
+<<< @/public/code/React/列表渲染/App.js{12}
+<<< @/public/code/React/列表渲染/index.js
 :::
 
 ### 列表渲染
 
-<<< ./code/条件渲染/App.js
+<<< @/public/code/React/条件渲染/App.js
 
 ### 事件处理
 
-<<< ./code/事件绑定/App.js
+<<< @/public/code/React/事件绑定/App.js
 
 ### useState
 
@@ -528,13 +528,13 @@ export default App;
 
 > 示例
 
-<<< ./code/useState/App.js
+<<< @/public/code/React/useState/App.js
 
 ### 样式控制
 
 :::code-group
-<<< ./code/样式控制/App.js{1}
-<<< ./code/样式控制/index.css
+<<< @/public/code/React/样式控制/App.js{1}
+<<< @/public/code/React/样式控制/index.css
 :::
 
 

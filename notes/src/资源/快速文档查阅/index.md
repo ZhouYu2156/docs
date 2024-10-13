@@ -4,7 +4,7 @@ footer: false
 ---
 
 <script setup lang='ts'>
-import References from '../../../.vitepress/theme/components/References.vue'
+import References from '/.vitepress/theme/components/References.vue'
 import {FrontEndItems,
         JavaScriptItems, 
         JavaScriptToolItems, 
@@ -15,7 +15,7 @@ import {FrontEndItems,
         ComponentLibItems, 
         PythonItems, 
         LinuxItems, 
-        BlogItems, } from '../../../.vitepress/configuration/modules/sources'
+        BlogItems, } from '/.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册

@@ -7,7 +7,7 @@
 
 
 ## HTTP 请求协议内容
-![http请求协议内容](./images/http请求协议内容.png)
+![http请求协议内容](/pictures/python_images/http请求协议内容.png)
 
 ## 快速上手
 ```python

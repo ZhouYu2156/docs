@@ -9,7 +9,7 @@
 :::
 
 
-![drf-tutorial](./images/drf-tutorial.png)
+![drf-tutorial](/pictures/python_images/drf-tutorial.png)
 
 
 ## Restful API 最佳实践
@@ -239,7 +239,7 @@ urlpatterns = [
 
 ## DRF 组件模块
 
-![DRF进阶与实战](./images/DRF进阶与实战.png)
+![DRF进阶与实战](/pictures/python_images/DRF进阶与实战.png)
 
 
 ## 创建模型

@@ -18,7 +18,7 @@ export default defineConfig({
       }),
     ],
     build: {
-      chunkSizeWarningLimit: 1024,
+      chunkSizeWarningLimit: 1024 * 10,
     },
   },
   lang: "zh-CN",
@@ -26,7 +26,7 @@ export default defineConfig({
   // 设置打包输出路径
   outDir: "./dist",
   // 设置源文件目录
-  srcDir: "./src",
+  // srcDir: "./src",
   srcExclude: ["**/README.md", "**/TODO.md"],
   description: "一心创作优质内容,你学习路上的笔记好帮手...",
   /** 网站 head 的 meta 元数据 */
