@@ -47,17 +47,10 @@ if [ $? -eq 0 ]; then
     git push -f docs main
     if [ $? -eq 0]; then
       echo "静态站点资源推送成功！"
+    fi
   else 
     echo "构建静态站点失败！"
   fi 
 else 
   echo "开发源代码推送失败！"
 fi
-
-
-
-
-
-
-
-
