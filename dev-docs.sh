@@ -35,20 +35,25 @@ if [ $? -eq 0 ]; then
   npm run build
 
   # 提交静态资源
-  cd ./notes/dist
-  # git init
-  # git branch -m master main
-  git add .
-  git commit -m "$1"
-  git remote add docs git@github.com:ZhouYu2156/zhouyu2156.github.io.git
-  git pull docs main --allow-unrelated-histories
   if [ $? -eq 0 ]; then
-    echo "Pushing to docs"
-  else
-    echo "Error pushing to docs"
-    exit 1
-  fi
-  git push -f docs main
+    cd ./dist
+    git init
+    git remote add docs git@github.com:ZhouYu2156/zhouyu2156.github.io.git
+    git add .
+    git commit -m "$1"
+    git branch -m master main
+    git pull docs main --allow-unrelated-histories
+    if [ $? -eq 0 ]; then
+      echo "Pushing to docs"
+    else
+      echo "Error pushing to docs"
+      exit 1
+    fi
+    git push docs main
+    echo "Pushing to docs is Successful!"
+  else 
+   echo "Error building static site"
+  fi 
 else
   echo "Error pushing to github"
   exit 1
