@@ -20,6 +20,20 @@
 
 :::
 
+
+
+## Win11 右键菜单还原成 Win10
+
+::: tip 提示
+
+- 按住`Shift + 右键`可以使用Win10风格的右键菜单
+
+
+
+:::
+
+
+
 ## windows 本地安装人工智能
 
 ::: tip 教程
@@ -37,7 +51,7 @@
 ::: tip 下载
 - 推荐1：[谷歌应用商店（国外）](https://chromewebstore.google.com/)
 - 推荐2：[极简插件（国内）](https://chrome.zzzmh.cn/#/index)
-- JSON可视化：[jsoncrack](https://jsoncrack.com/editor)
+- JSON可视化：[jsoncrack](https://jsoncrack.com/)
 :::
 
 | 插件名称 |             插件功能描述             |
