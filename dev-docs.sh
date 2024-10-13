@@ -39,20 +39,16 @@ if [ $? -eq 0 ]; then
   # 提交静态资源
   if [ $? -eq 0 ]; then
     cd ./dist
+    git init
     git add .
     git commit -m "$1"
-    # git branch -m master main
-    # git pull docs main --allow-unrelated-histories
-    if [ $? -eq 0 ]; then
-      echo "Pushing to docs"
-    else
-      echo "Error pushing to docs"
-      exit 1
-    fi
+    git branch -m master main
+    git pull docs main --allow-unrelated-histories
     git push -f docs main
-    echo "Pushing to docs is Successful!"
+    if [ $? -eq 0]; then
+      echo "静态站点资源推送成功！"
   else 
-   echo "Error building static site"
+    echo "构建静态站点失败！"
   fi 
 else 
   echo "开发源代码推送失败！"
