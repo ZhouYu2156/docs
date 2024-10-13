@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<style scoped lang='scss'>
+<style scoped lang='css'>
 @property --sidebar-width {
     /** 属性值的数据类型, 后续更改会依据数据类型是否一致从而决定是否覆盖该属性 */
     syntax: "<length>";
