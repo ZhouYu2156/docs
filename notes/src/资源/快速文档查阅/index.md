@@ -15,7 +15,7 @@ import {FrontEndItems,
         ComponentLibItems, 
         PythonItems, 
         LinuxItems, 
-        BlogItems, } from '../../../.vitepress/configuration/modules/sources/'
+        BlogItems, } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册

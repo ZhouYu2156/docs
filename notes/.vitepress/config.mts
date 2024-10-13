@@ -1,9 +1,26 @@
 import { defineConfig } from "vitepress";
+// 自动导入插件
+import AutoImport from "unplugin-auto-import/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import Components from "unplugin-vue-components/vite";
 import FILINGS from "./archive"; // 档案
 import { markdown, nav, search, sidebar, socialLinks } from "./configuration"; // 配置分模块管理
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+    build: {
+      chunkSizeWarningLimit: 1024,
+    },
+  },
   lang: "zh-CN",
   title: "极 客 兔",
   // 设置打包输出路径

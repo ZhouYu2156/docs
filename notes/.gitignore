@@ -1,6 +1,7 @@
 .vscode/
 .idea/
 dist/
+**/dist.zip
 **/cache/
 **/.temp/
 node_modules/
