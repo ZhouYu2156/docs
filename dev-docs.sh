@@ -1,9 +1,9 @@
 # !/bin/bash
 
-set -x
+set -e
 
-git remote add githubware git@github.com:ZhouYu2156/docs.git
-git remote add docs git@github.com:ZhouYu2156/zhouyu2156.github.io.git
+# git remote add githubware git@github.com:ZhouYu2156/docs.git
+# git remote add docs git@github.com:ZhouYu2156/zhouyu2156.github.io.git
 
 echo "Commit message: $1"
 
