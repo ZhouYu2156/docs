@@ -16,18 +16,20 @@ git commit -m "$1"
 git push githubware main
 
 if [ $? -eq 0 ]; then
-  echo "Pushing to githubware"
+  echo "\n"
+  echo "Pushing to githubware is Successful!"
+  echo "\n"
 else
   echo "Error pushing to githubware"
   exit 1
 fi
 
-echo "Commit pushed successfully"
+echo "\nCommit pushed successfully\n"
 
 
 if [ $? -eq 0 ]; then
   cd ./notes/dist
-  git init
+  # git init
   # git branch -m master main
   git add .
   git commit -m "$1"
