@@ -27,7 +27,7 @@ echo "Commit pushed successfully"
 
 if [ $? -eq 0 ]; then
   cd ./notes/dist
-  git init
+  # git init
   # git branch -m master main
   git add .
   git commit -m "$1"
