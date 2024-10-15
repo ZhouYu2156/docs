@@ -1588,7 +1588,7 @@ set_option("display.max_rows", None)
 ### numpy 库使用
 
 <script setup>
-    import NumpyDataType from '/.vitepress/theme/components/NumpyDataType.vue'
+    import NumpyDataType from '../../../.vitepress/theme/components/NumpyDataType.vue'
 
 </script>
 

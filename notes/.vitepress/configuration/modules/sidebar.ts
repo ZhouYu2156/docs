@@ -1,7 +1,8 @@
-import { DefaultTheme } from "vitepress";
+import { DefaultTheme } from 'vitepress'
+import { autoRenderSidebar } from '../../tools'
 
 /** 二级目录下时显示树形结构 */
-export const sidebar: DefaultTheme.Sidebar = {
+export const sidebar: DefaultTheme.Sidebar = autoRenderSidebar() /*{
   "/个人作品/": [
     {
       text: "成长日志",
@@ -298,4 +299,4 @@ export const sidebar: DefaultTheme.Sidebar = {
       ],
     },
   ],
-};
+};*/

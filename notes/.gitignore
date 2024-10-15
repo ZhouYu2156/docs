@@ -1,6 +1,6 @@
 .vscode/
 .idea/
-dist/
+**/dist/
 **/dist.zip
 **/cache/
 **/.temp/

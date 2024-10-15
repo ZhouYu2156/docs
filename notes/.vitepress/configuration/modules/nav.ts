@@ -1,8 +1,7 @@
-import { DefaultTheme } from "vitepress";
-// import { autoRenderNavbar } from '../../tools'
+import { DefaultTheme } from 'vitepress'
+import { autoRenderNavbar } from '../../tools'
 
-export const nav: DefaultTheme.NavItem[] = [
-  /** 每一个二级目录分类 */
+export const nav: DefaultTheme.NavItem[] = autoRenderNavbar() /*[
   {
     text: "首页",
     link: "/",
@@ -130,7 +129,7 @@ export const nav: DefaultTheme.NavItem[] = [
       },
     ],
   },
-];
+];*/
 
 /* console.log(
   JSON.stringify(global.VITEPRESS_CONFIG.userConfig.themeConfig.nav, null, 4)

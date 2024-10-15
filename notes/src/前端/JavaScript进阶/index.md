@@ -117,7 +117,7 @@ condition ? 表达式1 : 表达式2;
 ## 移位
 
 <script setup>
-import ShiftBit from '/.vitepress/theme/components/ShiftBit.vue'
+import ShiftBit from '../../../.vitepress/theme/components/ShiftBit.vue'
 </script>
 
 ::: tip 提示：
