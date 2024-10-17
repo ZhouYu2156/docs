@@ -13,8 +13,8 @@ hero:
       text: 博客
       link: /
     - theme: brand
-      text: 快速开始
-      link: /
+      text: 视频教程
+      link: /tutorials/
     - theme: alt
       text: 文档查询手册
       link: /

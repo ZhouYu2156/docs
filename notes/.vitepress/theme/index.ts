@@ -1,19 +1,66 @@
 // https://vitepress.dev/guide/custom-theme
-import type { Theme } from "vitepress";
-import DefaultTheme from "vitepress/theme";
-import { h } from "vue";
-import MusicPlayer from "./components/MusicPlayer.vue";
-import "./index.scss";
+import type { Theme } from 'vitepress'
+import DefaultTheme, { VPDocAsideSponsors } from 'vitepress/theme'
+import { h } from 'vue'
+import MusicPlayer from './components/MusicPlayer.vue'
+import Tutorial from './components/Tutorial.vue'
+import './index.scss'
 
 export default {
-  extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      "nav-bar-content-after": () => h(MusicPlayer),
-    });
-  },
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  },
-} satisfies Theme;
+	extends: DefaultTheme,
+	Layout: () => {
+		return h(DefaultTheme.Layout, null, {
+			// https://vitepress.dev/guide/extending-default-theme#layout-slots
+			'nav-bar-content-after': () => h(MusicPlayer),
+			'aside-outline-after': () =>
+				h(VPDocAsideSponsors, {
+					data: [
+						{
+							name: 'VueMastery',
+							img: 'https://sponsors.vuejs.org/images/vuemastery.avif',
+							url: 'https://www.vuemastery.com/',
+						},
+						{
+							name: 'VueSchool',
+							img: 'https://sponsors.vuejs.org/images/vueschool.avif',
+							url: 'https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1',
+						},
+						{
+							name: 'Vehikl',
+							img: 'https://sponsors.vuejs.org/images/vehikl.avif',
+							url: 'https://vehikl.com/',
+						},
+						{
+							name: 'Passionate People',
+							img: 'https://sponsors.vuejs.org/images/passionate_people.avif',
+							url: 'https://passionatepeople.io/',
+						},
+					],
+					size: 'xmini',
+					mode: 'aside',
+					tier: 'Sponsors',
+				}),
+			'aside-ads-before': () =>
+				h(VPDocAsideSponsors, {
+					data: [
+						{
+							name: 'Vehikl',
+							img: 'https://sponsors.vuejs.org/images/vehikl.avif',
+							url: 'https://vehikl.com/',
+						},
+						{
+							name: 'Passionate People',
+							img: 'https://sponsors.vuejs.org/images/passionate_people.avif',
+							url: 'https://passionatepeople.io/',
+						},
+					],
+					size: 'mini',
+					mode: 'normal',
+				}),
+		})
+	},
+	enhanceApp({ app, router, siteData }) {
+		// 注册自定义全局组件
+		app.component('Tutorial', Tutorial)
+	},
+} satisfies Theme

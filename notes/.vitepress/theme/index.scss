@@ -346,3 +346,8 @@ html.dark {
 .text-center {
   text-align: center !important;
 }
+
+/** sponsor 去掉灰色滤镜 */
+.vp-sponsor-grid-item .vp-sponsor-grid-image {
+  filter: grayscale(0) invert(0);
+}

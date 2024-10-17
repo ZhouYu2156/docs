@@ -17,7 +17,7 @@ const defaultReadConfig: {
 	/** 默认解析目录 */
 	source?: string
 } = {
-	exclude: ['images', 'public', 'code'],
+	exclude: ['images', 'public', 'code', 'tutorials'],
 	excludeFile: ['README.md', 'index.md'],
 	source: 'src',
 }

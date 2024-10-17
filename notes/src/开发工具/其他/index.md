@@ -1,7 +1,6 @@
 # 其它工具
 
 ## WinRar 解压缩工具
-
 ::: tip 推荐：
 
 > Windows & Mac & Linux 系统的 `免费解压缩工具`：
@@ -13,7 +12,6 @@
 :::
 
 ## Win11 去掉快捷图标的箭头
-
 ::: tip 提示
 
 推荐：[参考](http://m.pcxitongcheng.com/xtjc/win11/2023-09-13/38609.html)
@@ -21,21 +19,14 @@
 :::
 
 
-
 ## Win11 右键菜单还原成 Win10
-
 ::: tip 提示
 
 - 按住`Shift + 右键`可以使用Win10风格的右键菜单
 
-
-
 :::
 
-
-
 ## windows 本地安装人工智能
-
 ::: tip 教程
 
 > 官网：[去看看](https://ollama.com/)

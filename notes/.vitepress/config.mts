@@ -51,11 +51,17 @@ export default defineConfig({
 		lastUpdated: {
 			text: '最近更新时间',
 		},
+		notFound: {
+			title: '找不到页面',
+			linkText: '返回首页',
+			quote: '如果你不改变方向, 保持寻找, 你可能会到达你想要去的地方！',
+		},
 		/* 编辑链接 */
 		editLink: {
-			pattern: 'https://github.com/ZhouYu2156/DevCode',
+			pattern: 'https://github.com/ZhouYu2156/docs',
 			text: '在 Github 上编辑此页',
 		},
+		// 文章大纲
 		outline: {
 			level: 'deep',
 			label: '文 章 导 航',
