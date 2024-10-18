@@ -272,11 +272,128 @@ $ cat ~/.ssh/id_ed25519.pub
 # ...
 ```
 
-## 安装 `zsh` 工具
+## `MSYS2`环境安装 `zsh` 工具
+
+::: tip 前言
+可以这样认为，这个工具提供了类`Unix`环境，将`windows`环境与该环境隔离，所以在`MSYS2`环境外部是无法访问`windows`上配置好的环境变量的。在该环境中，建议直接当一台微型版的`Linux`系统来使用。常用的`Linux`命令在该环境中都默认提供了，比如`ls`、`pwd`、`df`等等。没有的话，可以尝试搜索一下`MSYS2`的仓库中是否有提供。常用的都有，比如`git`、`gcc`、`zsh`、`tmux`(终端分屏工具)等。
+
+`windows`上安装的`git bash`终端工具不能使用`tmux`终端分屏工具，所以特意安装`MSYS2`这个集成终端工具来玩的。
+:::
+
+::: info 资源官网
+- [MSYS2官网](https://www.msys2.org/)
+- [ohmyzsh仓库](https://github.com/ohmyzsh/ohmyzsh)
+
+:::
+
+### 安装`MSYS2`工具
+
+> 按照官网的安装步骤操作即可
+
+### 
+
+### 安装`zsh`工具
+
+::: info 示例
+`MSYS2`官网默认提供了很多开源工具，可以通过`pacman -S 工具名称`搜索，例如`pacman -S zsh`
+:::
+
+```bash
+$ pacman -S zsh   # 打开MSYS2终端界面，安装zsh
+```
+
+### 安装`vim`和`git`工具
+
+```bash
+$ pacman -S vim git -y
+```
+
+### 安装`oh-my-zsh`
+
+::: tip 说明
+上面安装了`git`工具后，就可以通过`oh-my-zsh`仓库说明文档里的安装说明进行安装了，在安装过程中需要使用`git`工具进行将仓库代码克隆到本地，这样不需要自己去`github`上手动下载了，所以一定要给`MSYS2`安装`git`扩展工具。
+:::
+
+```bash
+# 安装命令
+$ sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
+```
+
+![ohmyzsh安装完成](/pictures/Win/ohmyzsh安装完成.png)
+
+> 安装完成后，在刚才`MSYS2`默认安装的根目录下的`home > 用户名`子目录中，会看到一个`.oh-my-zsh`文件夹，里面就是`oh-my-zsh`的配置文件。包含主题、插件、更新工具等。
+
+### 配置`MSYS2`到系统环境变量
+
+> 这样方便在`windows`系统环境变量可用的终端中执行启动`MSYS2`终端工具的命令。
+
+![配置MSYS2到系统环境变量](/pictures/Win/配置MSYS2到系统环境变量.png)
+
+### 配置`MSYS2`终端主题
+
+::: info 提示
+- 类似于`windows`的`cmd`窗口，可以配置背景色、前景色等，`MSYS2`工具也支持在线配置主题并导出主题文件来设置本地的主题。下面的配置链接可以在`MSYS2`终端窗口顶部右击配置主题时获得。
+- 推荐：[官方提供的主题配置](https://ciembor.github.io/4bit/#)
+:::
+
+![MSYS2配置选项](/pictures/Win/MSYS2配置选项.png)
+
+### 配置`MSYS2`中文语言
+
+![设置MSYS2配置界面为中文](/pictures/Win/设置MSYS2配置界面为中文.png)
+
+> 设置为中文语言后，不止`MSYS2`终端的界面变成中文了，连`命令帮助文档`都是中文的了
+
+![中文界面](/pictures/Win/中文界面.png)
+
+### 设置`MSYS2`终端到`cmd`个性化配置
+
+![配置终端个性化](/pictures/Win/配置终端个性化端配置文件.png)
+
+```json
+{
+  // ...
+  	"profiles": {
+		"defaults": {},
+		"list": [
+        {
+          "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+          "name": "MSYS / zsh",
+          "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh",
+          "startingDirectory": "C:/msys64/home/%USERNAME%",
+          "icon": "C:/msys64/msys2.ico",
+          "font": {
+            "face": "Lucida Console",
+            "size": 16
+          }
+        },
+        {
+          "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+          "name": "MSYS / MSYS2",
+          "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+          "startingDirectory": "C:/msys64/home/%USERNAME%",
+          "icon": "C:/msys64/msys2.ico",
+          "font": {
+            "face": "Lucida Console",
+            "size": 12
+          }
+        }
+        // ...
+      ]
+    }
+}
+```
+
+::: warning 温馨提醒
+建议还是不要单独安装`MSYS2`了吧，因为`windows`终端也自带有分屏的功能。因为环境隔离，使用起来还是有点不方便。要集成到`VSCode`里面做终端还要做很多配置，有点麻烦。算了算了。
+:::
+
+## `Git Bash`安装 `zsh` 工具
 
 ::: info 推荐
 - 前往： [git官网](https://git-scm.com/)
 - 前往： [zsh安装包下载官网](https://packages.msys2.org/packages/zsh?repo=msys&variant=x86_64)
+
 :::
 
 ### 安装`Git`工具
@@ -333,6 +450,16 @@ fi
 
 
 ### 安装扩展`zsh`终端主题的`on my zsh`工具
+
+::: tip 目录文件
+- `lib`： 提供了核心功能的脚本库
+- `tools`： 提供安装、升级等功能的快捷工具
+- `plugins`： 自带插件的存在放位置
+- `templates`： 自带模板的存在放位置
+- `themes`：  自带主题文件的存在放位置
+- `custom`： 个性化配置目录，自安装的插件和主题可放这里
+:::
+
 
 - 在线安装
 
@@ -457,6 +584,20 @@ $ git clone https://gitee.com/mirrors/zsh-autosuggestions.git ${ZSH_CUSTOM}/plug
 - 在开启一个`zsh`终端实例的时候，会随机从主题资源中应用一个主题样式。只需要配置`~/.zshrc`文件中的`ZSH_THEME="random"`即可。
 
 :::
+
+
+### 本地化(正常显示中文)
+> 通过 `vim ~/.zshrc` 添加下面的配置
+
+```sh
+export LANG=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+```
+> 重新加载一下配置文件: `source ~/.zshrc`
+
+![设置地区和语言](/pictures/Win/设置地区和语言.png)
+
+> 如果再不显示中文, 就设置终端的 `外观 > 语言 & 字体`
 
 
 ## 配置 git 关联 `github` 仓库

@@ -49,3 +49,180 @@
 | :------: | :----------------------------------: |
 | JSONView | 美化JSON格式，可以折叠、展开对象层级 |
 |  XPath   |         测试Xpath语法解析DOM         |
+
+
+## `CMD`的使用
+
+|          快捷键          |                          功能                          |
+| :----------------------: | :----------------------------------------------------: |
+|         特殊功能         |                                                        |
+|          `F11`           |                        切换全屏                        |
+|      `Alt + Enter`       |         切换全屏<Badge text="*" type="tip" />          |
+|    `Ctrl + Shift + P`    |                      切换命令面板                      |
+|         窗口控制         |                                                        |
+|    `Ctrl + Shift + N`    |                        新建窗口                        |
+|    `Ctrl + Shift + D`    |                       复制标签页                       |
+|    `Ctrl + Shift + T`    |                       新建标签页                       |
+|    `Ctrl + Shift + W`    |     关闭当前活动面板<Badge text="*" type="tip" />      |
+|        `Alt + F4`        |                     退出`CMD`窗口                      |
+|       `Ctrl + F4`        |                        退出终端                        |
+|       `Ctrl + Tab`       |                       切换选项卡                       |
+|         面板控制         |                                                        |
+| `Ctrl + Alt + 方向箭头`  |     面板在方向上拆分<Badge text="*" type="tip" />      |
+| `Alt + Shift + 方向箭头` | 面板在方向上扩展/缩小空间<Badge text="*" type="tip" /> |
+|     `Alt + 方向箭头`     |                      切换活动面板                      |
+|           字体           |                                                        |
+|        `Ctrl + 0`        |                    恢复字号初始大小                    |
+|        `Ctrl + +`        |                        增大字号                        |
+|        `Ctrl + -`        |                        减小字号                        |
+|    `Ctrl + 鼠标滚轮`     |                        缩放字号                        |
+|    `Ctrl + Shift + B`    |         广播命令<Badge text="*" type="tip" />          |
+
+### 我的`cmd`个性化配置
+::: details 详情
+```json
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "toggleBroadcastInput",
+            "keys": "ctrl+shift+b"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "up"
+            },
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "ctrl+alt+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "keys": "ctrl+alt+right"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "left"
+            },
+            "keys": "ctrl+alt+left"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "right"
+            },
+            "keys": "shift+right"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            },
+            "keys": "shift+down"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "left"
+            },
+            "keys": "shift+left"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "up"
+            },
+            "keys": "shift+up"
+        },
+        {
+            "command": "quit",
+            "keys": "ctrl+f4"
+        }
+    ],
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6511}",
+    "initialPosition": ",",
+    "language": "zh-Hans",
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "commandline": "D:\\Program Files\\Git\\bin\\bash.exe --login -i",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6511}",
+                "hidden": false,
+		"icon": "D:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash"
+            },
+            // ...
+        ]
+    }
+}
+```
+:::
