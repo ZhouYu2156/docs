@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-import { PropType } from 'vue';
-import type { ReferenceItems } from '../../configuration/modules/types';
+import { PropType } from 'vue'
+import type { ReferenceItems } from '../../configuration/modules/types'
 
 const props = defineProps({
     items: {
@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
     <div class="table">
-        <div style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap;">
+        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
             <a v-for="item in props.items" :key="item.id" :href="item.link"
                 style="max-width: fit-content;min-width: 80px; height: 120px; border: 1px solid lightblue; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; text-decoration: none;margin: 5px;padding: 2px 3px;"
                 target="_blank">

@@ -4,6 +4,7 @@
 **/dist.zip
 **/cache/
 **/.temp/
+**/test/
 node_modules/
 
 

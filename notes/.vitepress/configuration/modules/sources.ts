@@ -18,6 +18,12 @@ export const FrontEndItems = ref<ReferenceItems>([
 		link: 'https://9elements.github.io/fancy-border-radius/#',
 		icon: 'https://9elements.github.io/fancy-border-radius/favicon-32x32.png',
 	},
+	{
+		id: 3,
+		title: 'OpenAI官网',
+		link: 'https://openai.com/',
+		icon: 'https://openai.com/favicon.ico?v=2',
+	},
 ])
 
 /**
@@ -189,6 +195,12 @@ export const AnimationLibItems = ref<ReferenceItems>([
 		link: 'https://www.gsap.com/',
 		icon: 'https://www.gsap.com/favicon-32x32.png',
 	},
+	{
+		id: 7,
+		title: 'UnoCSS',
+		link: 'https://unocss.com/',
+		icon: '',
+	},
 ])
 
 /**
@@ -259,9 +271,9 @@ export const VueItems = ref<ReferenceItems>([
 	},
 	{
 		id: 6,
-		title: 'Element Plus',
-		link: 'https://element-plus.org/zh-CN/',
-		icon: 'https://element-plus.org/images/element-plus-logo-small.svg',
+		title: 'VitePress官网',
+		link: 'https://vitepress.dev/zh/	',
+		icon: 'https://vitepress.dev/vitepress-logo-large.webp',
 	},
 	{
 		id: 7,
@@ -271,15 +283,39 @@ export const VueItems = ref<ReferenceItems>([
 	},
 	{
 		id: 8,
-		title: 'VitePress',
-		link: 'https://vitepress.qzxdp.cn/',
-		icon: 'https://vitepress.qzxdp.cn/vitepress-logo-mini.svg',
+		title: 'Vite',
+		link: 'https://cn.vitejs.dev/',
+		icon: 'https://cn.vitejs.dev/logo.svg',
 	},
 	{
 		id: 9,
-		title: 'Vite',
-		link: 'https://vitejs.cn',
-		icon: 'https://vitejs.cn/logo.svg',
+		title: 'Vue Router',
+		link: 'https://router.vuejs.org/zh/',
+		icon: 'https://router.vuejs.org/logo.svg',
+	},
+	{
+		id: 10,
+		title: 'VueUse',
+		link: 'https://vueuse.org/',
+		icon: 'https://vueuse.org/favicon.svg',
+	},
+])
+
+/**
+ * 代码格式化工具
+ */
+export const FormatItems = ref<ReferenceItems>([
+	{
+		id: 1,
+		title: 'ESLint',
+		link: 'https://eslint.org/',
+		icon: 'https://eslint.org/icon.svg',
+	},
+	{
+		id: 2,
+		title: 'Prettier',
+		link: 'https://prettier.io/',
+		icon: 'https://prettier.io/icon.png',
 	},
 ])
 
@@ -363,6 +399,24 @@ export const ComponentLibItems = ref<ReferenceItems>([
 		link: 'https://uiverse.io/',
 		icon: 'https://uiverse.io/android-chrome-192x192.png',
 	},
+	{
+		id: 2,
+		title: 'Element Plus',
+		link: 'https://element-plus.org/zh-CN/',
+		icon: 'https://element-plus.org/images/element-plus-logo-small.svg',
+	},
+	{
+		id: 3,
+		title: 'UnoCSS',
+		link: 'https://unocss.dev/',
+		icon: 'https://unocss.dev/logo.svg',
+	},
+	{
+		id: 4,
+		title: 'UnoCSS中文网',
+		link: 'https://unocss.jiangruyi.com/',
+		icon: 'https://unocss.jiangruyi.com/logo.svg',
+	},
 ])
 
 /**
@@ -375,5 +429,11 @@ export const BlogItems = ref<ReferenceItems>([
 		title: '后盾人编程教程',
 		link: 'https://doc.houdunren.com/',
 		icon: '	https://doc.houdunren.com/logo.png',
+	},
+	{
+		id: 2,
+		title: '全栈工具',
+		link: 'https://vitepress.qzxdp.cn/',
+		icon: 'https://vitepress.qzxdp.cn/vitepress-logo-mini.svg',
 	},
 ])

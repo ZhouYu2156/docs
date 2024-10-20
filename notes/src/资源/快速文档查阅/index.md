@@ -15,7 +15,8 @@ import {FrontEndItems,
         ComponentLibItems, 
         PythonItems, 
         LinuxItems, 
-        BlogItems, } from '../../../.vitepress/configuration/modules/sources'
+        BlogItems,
+        FormatItems } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册
@@ -40,6 +41,9 @@ import {FrontEndItems,
 
 ## React 全家桶
 <References :items="ReactItems"/>
+
+## 代码规范工具
+<References :items="FormatItems"/>
 
 ## 开源组件库
 <References :items="ComponentLibItems" />
