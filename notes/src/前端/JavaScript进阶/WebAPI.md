@@ -166,10 +166,39 @@ const checkMemory = () => {
 <style scoped></style>
 
 ```
-
 :::
 
 
+## 广告 & 通知
+
+> 利用 `WebAPI` 接口的能力，可以制造`PC`端的桌面通知。
+
+```javascript
+async function useNotification() {
+	/** 请求设备权限 */
+	const permission = await Notification.requestPermission()
+	/** 允许情况下, 创建通知 */
+	if (permission === 'granted') {
+		const notify = new Notification('极客兔 - 笔记站', {
+			image: 'https://img1.baidu.com/it/u=3981774678,804382988&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto', // 广告图片链接
+			icon: 'https://www.zhouyu2156.cn/pineapple-logo.svg',
+			body: '一心创作优质内容',
+			lang: 'zh-CN',  // 语言
+			dir: 'auto', // 文字方向
+			badge: 'https://www.zhouyu2156.cn/pineapple-logo.svg',
+			vibrate: [200, 100, 200], // 震动(如果设备支持的话)
+			silent: false, // 静默
+			requireInteraction: false, // 要求交互
+		})
+		/** 用户点击通知事件 */
+		notify.onclick = () => {
+			window.open('https://www.zhouyu2156.cn/')
+		}
+	}
+}
+
+useNotification()
+```
 
 ## 文档对象
 ::: tip

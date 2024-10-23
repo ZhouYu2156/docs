@@ -24,6 +24,12 @@ export const FrontEndItems = ref<ReferenceItems>([
 		link: 'https://openai.com/',
 		icon: 'https://openai.com/favicon.ico?v=2',
 	},
+	{
+		id: 4,
+		title: 'DrawDB',
+		link: 'https://www.drawdb.app/',
+		icon: 'https://www.drawdb.app/favicon.ico',
+	},
 ])
 
 /**

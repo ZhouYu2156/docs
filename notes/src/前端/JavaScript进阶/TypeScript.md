@@ -1136,3 +1136,65 @@ console.warn(Reflect.getMetadata('site', user, 'name'))
 ```
 
 
+## 类型声明文件
+
+::: tip 说明
+- 类型声明文件只是提供集成开发环境编辑器拥有更好的更智能的类型提示，类型声明文件不能直接编写业务逻辑，只提供形式上的类型结构！
+- 下面介绍几种类型声明文件创建的方式：
+:::
+
+
+### 自己编写类型声明文件
+
+::: code-group
+
+```javascript [utils.js]
+// 编写实际的业务逻辑代码
+export const add = (x, y) => x + y
+export const concat = (str1, str2) => str1 + str2
+```
+
+```typescript [utils.d.ts]
+// 编写类型声明文件
+declare const concat: (str1: string, str2: string) => string
+
+declare const add: (x: number, y: number) => number
+
+```
+```javascript [main.js]
+// 使用 utils.js 模块时， 就会自动加载同名的类型声明文件 utils.d.ts 以便提示，是编辑器自动加载来提示的，并不是真的运行时的引用加载
+import { add, concat } from './utils.js'
+
+const r1 = add(1, 2)
+const r2 = concat('hello', 'world')
+console.log(r1, r2)
+```
+:::
+
+::: warning 缺陷
+- 明明在TS中已经自己写过类型注解了，结果转换出来的`js`库还需要自己手动编写类型声明文件，那不得麻烦死。所以这仅仅是一种练习和学习的时候使用的方式，接下来由`typescript`编译工具为我根据`ts`文件中的类型注解为我们自动生成声明文件。
+:::
+
+### 自动生成类型声明文件
+
+> 需要先全局安装`TS`编译工具
+
+```bash
+$ npm i typescript -g
+```
+
+> 然后使用命令`tsc --init`初始化生成`TS`配置文件`tsconfig.json`，配置文件中开启下面的选项
+
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
+```
+
+> 编写完`js`文件后，在`tsconfig.json`同级路径下，执行`tsc`进行编译即会自动生成每一个`js`文件的`.d.ts`类型声明文件。
