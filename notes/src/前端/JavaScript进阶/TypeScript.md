@@ -148,7 +148,7 @@
 
 ### 第三种方式
 > - `npm i -g nodemon` 下载`编译&运行`工具(实时监听文件变化`自动编译&运行`)
-> - `nodemon xxx.ts` 实时监听文件变化`自动编译&运行`(如果当前目录下有`package.json`文件,则使用`nodemon`不接文件名可以直接运行`"main"`指定的入口脚本文件)
+> - `nodemon xxx.ts`(单文件)或`nodemon --watch src/**/*.ts --exec ts-node src/main.ts`(多文件) 实时监听文件变化`自动编译&运行`(如果当前目录下有`package.json`文件,则使用`nodemon`不接文件名可以直接运行`"main"`指定的入口脚本文件)
 > - 优点: 实时监听文件变化`自动编译&运行`;
 
 ### 使用一些实验性的功能
