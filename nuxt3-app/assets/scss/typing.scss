@@ -1,0 +1,145 @@
+// blink caret color
+$blink-color: orangered;
+// 字符间距
+$letter-spacing: 0.05em;
+/* 定义文字渐变背景色环动画 */
+$color-circle-count: 10; // 360deg / 10 = 36deg 每一帧动画色环旋转 36deg
+/** 文字打字机动画组 */
+$typewriter-repeat-animations:
+    width-change 3.5s steps(34, end) forwards infinite,
+    blink-caret 0.5s step-end infinite;
+
+$typewriter-animations:
+    width-change 3.5s steps(34, end) forwards,
+    blink-caret 0.5s step-end infinite;
+
+/** 文字渐变背景动画 */
+$text-gradient-animation: text-gradient-animation #{$color-circle-count}s linear infinite alternate;
+
+/** 文字渐变背景 + 打字机动画 */
+$text-gradient-and-typing-animation: $text-gradient-animation, $typewriter-animations;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+/** 打字机动画 */
+@keyframes width-change {
+    0% {
+        width: 0%;
+    }
+    85%,
+    100% {
+        width: 100%;
+    }
+}
+
+/*** 光标闪烁动画 */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: $blink-color;
+    }
+}
+
+/** 打字机动画 */
+@mixin typewriter {
+    font-family: monospace;
+    /** 保证文字在动画之前隐藏 */
+    overflow: hidden;
+    /** 使用边框模拟光标 */
+    border-right: $letter-spacing solid $blink-color;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: $letter-spacing;
+}
+
+@keyframes text-gradient-animation {
+    // 设置色环从 0 到 360deg 一圈
+    /*0% {
+    //text-shadow: 3px 3px 5px deeppink;
+  }
+  50% {
+    //text-shadow: 0 0 5px orangered;
+  }
+  100% {
+    //text-shadow: -3 -3px 5px blue;
+  }*/
+    @for $i from 0 through $color-circle-count {
+        $percentage: $i * 10%;
+        $angle: 36deg * $i;
+        #{$percentage} {
+            filter: hue-rotate(#{$angle});
+            //filter: drop-shadow(0px 0px 20px red) invert(25%);
+        }
+    }
+}
+
+/** 文字渐变
+    文字渐变效果参考自:
+       (1) https://zhuanlan.zhihu.com/p/643134748
+       (2) https://www.jb51.net/css/437249.html
+
+     文字渐变背景动画参考自:
+       (1) https://blog.csdn.net/uuplay0216/article/details/140253144
+
+     动画参考自:
+        (1) https://www.cnblogs.com/jiefeng-guo-666/p/12383323.html
+*/
+/* 文字渐变背景 */
+.text-gradient-bg {
+    color: transparent;
+    /** 背景渐变色 */
+    background: linear-gradient(45deg, cyan, deeppink, purple, gold);
+    /*background: linear-gradient(
+					to right,
+					cyan 25%,
+					deeppink 50%,
+					purple 75%,
+					gold 100%
+	);*/
+    /*background: linear-gradient(90deg, orangered, red, orange, deeppink);*/
+    /** 使用背景的文字剪切效果 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /** 使用过滤器: 添加阴影 */
+    filter: drop-shadow(0px 0px 128px #0ff);
+    padding: 10px 5px;
+    /** 禁止用户选择文本 */
+    user-select: none;
+    /** 用户鼠标悬停时，显示指针 */
+    cursor: default;
+    /** 设置用户鼠标悬停时，显示小手图标 */
+    /*cursor: pointer;*/
+    /*text-shadow: 1px 1px 2px #0fc;*/
+    -webkit-text-fill-color: transparent;
+    // text-shadow: 1px 1px 2px #0fc, -1px -1px 1px gold;
+    /** 设置文字背景渐变颜色动画 */
+    /** 文字渐变背景动画 */
+    &.text-gradient-animation {
+        animation: $text-gradient-animation;
+    }
+
+    &.typing {
+        @include typewriter;
+        animation: $typewriter-animations;
+    }
+    &.typing-repeat {
+        @include typewriter;
+        animation: $typewriter-repeat-animations;
+    }
+
+    &.text-typing-and-gradient {
+        @include typewriter;
+        animation: $text-gradient-and-typing-animation;
+    }
+}

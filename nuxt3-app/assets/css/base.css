@@ -1,0 +1,27 @@
+html,
+body,
+iframe,
+#app {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/** 设置滚动条 */
+*::-webkit-scrollbar {
+	width: 8px;
+	background: #eee;
+	border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+	width: 8px;
+	background-color: #bbb;
+	border-radius: 3px;
+}

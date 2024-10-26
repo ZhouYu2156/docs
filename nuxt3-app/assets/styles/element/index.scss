@@ -1,0 +1,28 @@
+// src/styles/element/index.scss
+$colors: (
+    "white": #ffffff,
+    "black": #000000,
+    "primary": (
+        "base": #0d6efd
+    ),
+    "success": (
+        "base": #20c997
+    ),
+    "warning": (
+        "base": #ffc107
+    ),
+    "danger": (
+        "base": #e03f4f
+    ),
+    "error": (
+        "base": #ce2929
+    ),
+    "info": (
+        "base": #09b2d4
+    )
+);
+
+/* 只需要重写你需要的即可 */
+@use "../../../node_modules/element-plus/theme-chalk/src/common/var.scss" with (
+    $colors: $colors
+);

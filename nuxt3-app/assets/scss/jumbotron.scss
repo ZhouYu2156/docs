@@ -1,0 +1,211 @@
+@use "./vars" as *;
+
+// 巨幕
+.jumbotron {
+    width: 100%;
+    height: 100%;
+}
+.jumbotron-title {
+    font-size: 6em;
+}
+// hero背景
+.hero-image {
+    width: 450px;
+    height: 340px;
+    aspect-ratio: auto 450 / 340;
+}
+.lead {
+    font-size: 1.4rem;
+}
+/** 主题切换时的巨幕背景变化 */
+// 暗黑模式
+html[theme="dark"] .jumbotron {
+    color: #ffffff;
+    background-color: #000000;
+    // 巨幕背景图片
+
+    .jumbotron-bg {
+        padding-top: 34px;
+        color: #ffffff;
+        background-color: #000000;
+        // 设置巨幕背景图片
+        background-image: #{$bg-images};
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+// 白天模式
+html {
+    .jumbotron {
+        color: #000000;
+        background-color: var(#f8f9fa); // 使用 Bootstrap 的变量
+        background-image: none;
+
+        /** 生成彩虹渐变色动画 */
+        // 自定义彩虹色列表
+        $rainbow-colors: (#ff0000, #ffa500, #ffff00, #008000, #00ffff, #0000ff, #800080, #4b0082);
+        // 获取彩虹色列表长度
+        $colors-length: length($rainbow-colors);
+        // 设置 rgb 透明度
+        $rainbow-gradient-opacity: 0.05;
+        // 动画时长
+        $animation-duration: #{calc($colors-length * 1s)};
+        // 渐变背景总宽度
+        $gradient-width: $colors-length * 100%;
+
+        // 构建动画帧
+        @keyframes rainbow-gradient-animation {
+            // 初始帧，设置在0%以确保平滑开始
+            0% {
+                background-position: 0 0;
+            }
+
+            // 循环中的每一种颜色的关键帧
+            @for $i from 1 through $colors-length {
+                $percentage: percentage($i / $colors-length);
+
+                #{$percentage} {
+                    background-position: #{$percentage} 0;
+                }
+            }
+        }
+
+        // 生成彩虹色 rgba 列表
+        $rainbow-colors-rgba: ();
+
+        @for $i from 1 through $colors-length {
+            $color: nth($rainbow-colors, $i);
+            $alpha: $rainbow-gradient-opacity * $i;
+            $rgba: rgba($color, $alpha);
+            $rainbow-colors-rgba: map-merge(
+                $rainbow-colors-rgba,
+                (
+                    $i: $rgba
+                )
+            );
+        }
+
+        // 构建渐变背景中的颜色列表
+        $gradient-colors: ();
+
+        // 将列表中的每一组 (索引, 颜色) 取出来, 将值使用逗号拼接成字符串
+        @each $key, $value in $rainbow-colors-rgba {
+            $gradient-colors: append($gradient-colors, $value, comma); // 添加逗号分隔符
+        }
+
+        // 应用动画
+        &.rainbow-gradient-bg {
+            background: linear-gradient(to right, #{$gradient-colors});
+            // 设置背景大小
+            background-size: #{$gradient-width} 100%;
+            // 启用动画
+            animation: rainbow-gradient-animation #{$animation-duration} linear alternate infinite;
+        }
+    }
+}
+/** 暗色主题背景 */
+html.dark {
+    // 巨幕背景图片
+    .jumbotron-bg {
+        color: #ffffff;
+        background-color: #000000;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        // 设置巨幕背景图片
+        background-image: #{$bg-images};
+    }
+}
+
+// 定义主要颜色
+$primary-color: #0d6efd; // 你可以根据需要调整这个颜色
+$primary-rgb: 13, 110, 253; // 对应的 RGB 值
+
+// 定义按钮的基本样式
+.btn-outline-primary {
+    color: #{$primary-color};
+    border-color: #{$primary-color};
+    border-width: 1px;
+    border-style: solid;
+    background-color: transparent;
+    padding: 0.375rem 0.75rem; // 默认内边距
+    font-size: 1rem; // 默认字体大小
+    line-height: 1.5; // 默认行高
+    border-radius: 0.25rem; // 默认圆角
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+
+    // 悬停状态
+    &:hover {
+        color: #fff;
+        background-color: #{$primary-color};
+        border-color: #{$primary-color};
+    }
+
+    // 焦点状态
+    &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+    }
+
+    // 激活状态
+    &.active,
+    &:active {
+        color: #fff;
+        background-color: #{$primary-color};
+        border-color: #{$primary-color};
+    }
+
+    // 禁用状态
+    &[disabled],
+    fieldset:disabled & {
+        color: #{$primary-color};
+        background-color: transparent;
+        opacity: 0.65; // 禁用状态下的透明度
+    }
+
+    // 非激活状态
+    &.not-active {
+        color: #{$primary-color};
+        background-color: transparent;
+    }
+
+    &.not-active:hover {
+        color: #{$primary-color};
+        background-color: transparent;
+    }
+
+    &.not-active:focus {
+        box-shadow: none;
+    }
+}
+.btn {
+    padding-block: var(--bs-btn-padding-x);
+    padding-top: var(--bs-btn-padding-y);
+    padding-bottom: var(--bs-btn-padding-y);
+    border-radius: var(--bs-btn-border-radius);
+    font-size: var(--bs-btn-font-size);
+}
+.btn-lg {
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: 0.5rem;
+    font-size: 3rem;
+    display: inline-block;
+}
+/** 当鼠标悬浮在巨幕的大按钮上时，将文本渐变背景色初始化 */
+.btn.btn-outline-primary:hover > span {
+    color: white !important;
+    animation: none;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    cursor: pointer;
+    -webkit-text-fill-color: initial;
+    transition: all 0.4s;
+}
