@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
 @use "./vars" as *;
 
 // 巨幕
@@ -19,7 +23,7 @@
 }
 /** 主题切换时的巨幕背景变化 */
 // 暗黑模式
-html[theme="dark"] .jumbotron {
+html.dark .jumbotron {
     color: #ffffff;
     background-color: #000000;
     // 巨幕背景图片
@@ -29,7 +33,7 @@ html[theme="dark"] .jumbotron {
         color: #ffffff;
         background-color: #000000;
         // 设置巨幕背景图片
-        background-image: #{$bg-images};
+        background-image: $bg-images;
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -47,11 +51,11 @@ html {
         // 自定义彩虹色列表
         $rainbow-colors: (#ff0000, #ffa500, #ffff00, #008000, #00ffff, #0000ff, #800080, #4b0082);
         // 获取彩虹色列表长度
-        $colors-length: length($rainbow-colors);
+        $colors-length: list.length($rainbow-colors);
         // 设置 rgb 透明度
         $rainbow-gradient-opacity: 0.05;
         // 动画时长
-        $animation-duration: #{calc($colors-length * 1s)};
+        $animation-duration: $colors-length * 1s;
         // 渐变背景总宽度
         $gradient-width: $colors-length * 100%;
 
@@ -64,10 +68,10 @@ html {
 
             // 循环中的每一种颜色的关键帧
             @for $i from 1 through $colors-length {
-                $percentage: percentage($i / $colors-length);
+                $percentage: math.percentage(math.div($i, $colors-length));
 
                 #{$percentage} {
-                    background-position: #{$percentage} 0;
+                    background-position: $percentage 0;
                 }
             }
         }
@@ -76,10 +80,11 @@ html {
         $rainbow-colors-rgba: ();
 
         @for $i from 1 through $colors-length {
-            $color: nth($rainbow-colors, $i);
+            $color: list.nth($rainbow-colors, $i);
             $alpha: $rainbow-gradient-opacity * $i;
+            $alpha: if($alpha > 1, 1, $alpha);
             $rgba: rgba($color, $alpha);
-            $rainbow-colors-rgba: map-merge(
+            $rainbow-colors-rgba: map.merge(
                 $rainbow-colors-rgba,
                 (
                     $i: $rgba
@@ -92,16 +97,16 @@ html {
 
         // 将列表中的每一组 (索引, 颜色) 取出来, 将值使用逗号拼接成字符串
         @each $key, $value in $rainbow-colors-rgba {
-            $gradient-colors: append($gradient-colors, $value, comma); // 添加逗号分隔符
+            $gradient-colors: list.append($gradient-colors, $value, comma); // 添加逗号分隔符
         }
 
         // 应用动画
         &.rainbow-gradient-bg {
-            background: linear-gradient(to right, #{$gradient-colors});
+            background: linear-gradient(to right, $gradient-colors);
             // 设置背景大小
-            background-size: #{$gradient-width} 100%;
+            background-size: $gradient-width 100%;
             // 启用动画
-            animation: rainbow-gradient-animation #{$animation-duration} linear alternate infinite;
+            animation: rainbow-gradient-animation $animation-duration linear alternate infinite;
         }
     }
 }
@@ -115,7 +120,7 @@ html.dark {
         background-position: center;
         background-repeat: no-repeat;
         // 设置巨幕背景图片
-        background-image: #{$bg-images};
+        background-image: $bg-images;
     }
 }
 
@@ -125,8 +130,8 @@ $primary-rgb: 13, 110, 253; // 对应的 RGB 值
 
 // 定义按钮的基本样式
 .btn-outline-primary {
-    color: #{$primary-color};
-    border-color: #{$primary-color};
+    color: $primary-color;
+    border-color: $primary-color;
     border-width: 1px;
     border-style: solid;
     background-color: transparent;
@@ -143,8 +148,8 @@ $primary-rgb: 13, 110, 253; // 对应的 RGB 值
     // 悬停状态
     &:hover {
         color: #fff;
-        background-color: #{$primary-color};
-        border-color: #{$primary-color};
+        background-color: $primary-color;
+        border-color: $primary-color;
     }
 
     // 焦点状态
@@ -156,26 +161,26 @@ $primary-rgb: 13, 110, 253; // 对应的 RGB 值
     &.active,
     &:active {
         color: #fff;
-        background-color: #{$primary-color};
-        border-color: #{$primary-color};
+        background-color: $primary-color;
+        border-color: $primary-color;
     }
 
     // 禁用状态
     &[disabled],
     fieldset:disabled & {
-        color: #{$primary-color};
+        color: $primary-color;
         background-color: transparent;
         opacity: 0.65; // 禁用状态下的透明度
     }
 
     // 非激活状态
     &.not-active {
-        color: #{$primary-color};
+        color: $primary-color;
         background-color: transparent;
     }
 
     &.not-active:hover {
-        color: #{$primary-color};
+        color: $primary-color;
         background-color: transparent;
     }
 

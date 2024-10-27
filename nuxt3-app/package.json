@@ -10,6 +10,7 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
+		"@nuxt/eslint": "^0.6.0",
 		"@nuxtjs/tailwindcss": "^6.12.2",
 		"bootstrap": "^5.3.3",
 		"mysql2": "^3.11.3",
@@ -21,7 +22,9 @@
 	},
 	"devDependencies": {
 		"@element-plus/nuxt": "^1.0.10",
+		"@nuxtjs/eslint-module": "^4.1.0",
 		"element-plus": "^2.8.6",
-		"sass": "^1.80.4"
+		"eslint": "^9.13.0",
+		"sass": "^1.79.0"
 	}
 }

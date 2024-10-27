@@ -39,9 +39,9 @@ const site: SiteConfig = {
 	// 语言
 	lang: 'zh-CN',
 	// 站点名称
-	title: 'Django+Bootstrap5',
+	title: 'Django + Nuxt3',
 	// 站点描述
-	description: '基于 Django + Bootstrap5 的博客系统',
+	description: '基于 Django + Nuxt3 的博客系统',
 	// 关键字描述
 	keywords: 'Django,Bootstrap5,Blog,Python,DjangoBlog,DjangoBootstrap5,markdown',
 	// 站点图标
@@ -66,9 +66,9 @@ const site: SiteConfig = {
 	// 站点标题
 	hero_title: 'Django+Nuxt3+Bootstrap5',
 	// 引导语
-	lead: '💯Django5 + Nuxt3 + 📖VitePress + Element Plus + TS ...强力驱动',
+	lead: '💯Django5 + Nuxt3 + 📖VitePress + Element Plus + TailWindCSS + TS ...强力驱动',
 	// 站点描述
-	subtitle: '✨提供音乐、博客、视频教程一站式解决方案的出色体验',
+	subtitle: '✨提供音乐、笔记、视频教程具有出色体验的一站式博客系统',
 	// 个人标签, 布尔值为False不显示
 	motto: '古之成大事者, 不惟有超世之才, 亦必有坚忍不拔之志.',
 	// 是否开启座右铭背景渐变
@@ -84,7 +84,7 @@ const footer: Footer = {
 	/* 页脚配置 */
 	// 开源协议
 	lisense: '基于 Apache License 2.0 许可发布',
-	//版权
+	// 版权
 	copyright: '版权所有 © 2019-2024 Admin.',
 	// 链接
 	links: [
