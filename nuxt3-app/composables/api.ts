@@ -1,0 +1,1 @@
+export const request = (url: string) => $fetch(url, { baseURL: useRuntimeConfig().public.baseURL })

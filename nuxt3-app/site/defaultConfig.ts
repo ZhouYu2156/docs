@@ -1,40 +1,6 @@
-export interface Footer {
-	lisense: string
-	copyright: string
-	links: Array<{
-		title: string
-		sublinks: Array<{
-			text: string
-			link: string
-		}>
-	}>
-}
+import type { Footer, SiteConfig } from "~/types/site"
 
-export interface SiteConfig {
-	/** 全局站点配置 */
-	lang: string
-	title: string
-	description: string
-	keywords: string
-	icon: string
-	logo: string
-	banner: boolean
-	gradient: boolean
-	text_gradient: boolean
-	typing: boolean
-	text_typing_and_gradient: boolean
-	repeatTyping: boolean
-	hero_img: string
-	hero_title: string
-	lead: string
-	subtitle: string
-	motto: string
-	motto_text_gradient: boolean
-	divider: boolean
-	Go: string
-	Go_isGradient: boolean
-}
-const site: SiteConfig = {
+export const site: SiteConfig = {
 	/** 站点基础配置 */
 	// 语言
 	lang: 'zh-CN',
@@ -64,7 +30,7 @@ const site: SiteConfig = {
 	// hero 背景图
 	hero_img: 'icons-hero.png',
 	// 站点标题
-	hero_title: 'Django+Nuxt3+Bootstrap5',
+	hero_title: 'Django5+Nuxt3+Bootstrap5',
 	// 引导语
 	lead: '💯Django5 + Nuxt3 + 📖VitePress + Element Plus + TailWindCSS + TS ...强力驱动',
 	// 站点描述
@@ -80,7 +46,56 @@ const site: SiteConfig = {
 	// 大按钮是否显示背景渐变
 	Go_isGradient: true,
 }
-const footer: Footer = {
+
+export const navbars = [
+	{
+		label: '🎵好听音乐',
+		to: '/HomePage/Music',
+	},
+	{
+		label: '🎞️视频教程',
+		to: '/HomePage/Tutorial',
+	},
+	{
+		label: '📖知识笔记',
+		to: 'https://www.zhouyu2156.cn/',
+		target: '_blank'
+	},
+	{
+		label: '💎编程导航',
+		to: 'https://www.zhouyu2156.cn/Programming/',
+		target: '_blank'
+	},
+	{
+		label: '✨特效大全',
+		to: 'https://www.zhouyu2156.cn/effects/飞星.html',
+		target: '_blank'
+	}
+]
+
+/** 强力的组合构建模块 */
+export const features = [
+	{
+		title: 'Music',
+		description: '选择你喜欢的音乐尽情享受.',
+		to: 'https://github.com/vueuse/vueuse',
+		icon: 'fluent-emoji-high-contrast:musical-note'
+	},
+	{
+		title: 'Video',
+		description: '体验适合你的教程, 你会知道什么叫优质.',
+		to: 'https://github.com/nuxt-community/eslint-module',
+		icon: 'heroicons:film-16-solid'
+	},
+	{
+		title: 'Note',
+		description: '大脑会淡忘, 但笔记永远在那里.',
+		to: 'https://github.com/nuxt-modules/tailwindcss',
+		icon: 'system-uicons:book-text'
+	}
+]
+
+export const footer: Footer = {
 	/* 页脚配置 */
 	// 开源协议
 	lisense: '基于 Apache License 2.0 许可发布',
@@ -89,67 +104,78 @@ const footer: Footer = {
 	// 链接
 	links: [
 		{
-			title: '参考文献',
-			sublinks: [
+			label: '参考文档',
+			children: [
 				{
-					text: 'MDN',
-					link: 'https://developer.mozilla.org/zh-CN/',
+					label: 'MDN',
+					to: 'https://developer.mozilla.org/zh-CN/',
+					target: '_blank'
 				},
 				{
-					text: '示例',
-					link: 'https://v5.bootcss.com/docs/examples/',
+					label: '示例',
+					to: 'https://v5.bootcss.com/docs/examples/',
+					target: '_blank'
 				},
 				{
-					text: '图标库',
-					link: 'https://icons.bootcss.com/',
+					label: '图标库',
+					to: 'https://icons.bootcss.com/',
+					target: '_blank'
 				},
 				{
-					text: '精选模板',
-					link: 'https://www.bootmb.com/',
+					label: '精选模板',
+					to: 'https://www.bootmb.com/',
+					target: '_blank'
 				},
 				{
-					text: 'Django文档',
-					link: 'https://docs.djangoproject.com/zh-hans/5.1/',
+					label: 'Django文档',
+					to: 'https://docs.djangoproject.com/zh-hans/5.1/',
+					target: '_blank'
 				},
 				{
-					text: 'Bootstrap 中文文档',
-					link: 'https://v5.bootcss.com/',
-				},
-			],
-		},
-		{
-			title: '扩展组件',
-			sublinks: [
-				{
-					text: 'Sass',
-					link: 'https://sass-lang.com/',
-				},
-				{
-					text: 'Markdown',
-					link: 'https://www.markdownguide.org/',
-				},
-				{
-					text: 'highlightjs',
-					link: 'https://highlightjs.org/',
+					label: 'Bootstrap 中文文档',
+					to: 'https://v5.bootcss.com/',
+					target: '_blank'
 				},
 			],
 		},
 		{
-			title: '开源部署',
-			sublinks: [
+			label: '扩展组件',
+			children: [
 				{
-					text: 'Docker',
-					link: 'https://www.docker.com/',
+					label: 'Sass',
+					to: 'https://sass-lang.com/',
+					target: '_blank'
 				},
 				{
-					text: 'Github',
-					link: 'https://github.com/',
+					label: 'Markdown',
+					to: 'https://www.markdownguide.org/',
+					target: '_blank'
+				},
+				{
+					label: 'highlightjs',
+					to: 'https://highlightjs.org/',
+					target: '_blank'
+				},
+			],
+		},
+		{
+			label: '开源部署',
+			children: [
+				{
+					label: 'Docker',
+					to: 'https://www.docker.com/',
+					target: '_blank'
+				},
+				{
+					label: 'Github',
+					to: 'https://github.com/',
+					target: '_blank'
 				},
 			],
 		},
 	],
 }
 
-const defaultConfig = { site, footer }
+const defaultConfig = { site, navbars, footer, features }
 
 export default defaultConfig
