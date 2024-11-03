@@ -91,13 +91,18 @@ onMounted(() => {
       <UPageLinks :links="links" />
     </ULandingCard>
 
-    <ULandingCard color="purple" class="col-span-8 row-span-12" :title="currentVideo.summary">
+    <ULandingCard color="violet" class="col-span-8 row-span-12" :title="currentVideo.summary">
       <template #description>
-        <div class="w-full h-full relative">
-          <img ref="coverRef" :src="currentVideo.cover" :alt="currentVideo.title" class="object-cover rounded-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div class="w-full h-full relative video-area">
+          <img :src="currentVideo.cover"
+               :alt="currentVideo.title"
+               class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+               ref="coverRef"
+          />
           <video
               controls
-              :src="currentVideo.play_url" ref="videoRef" />
+              :src="currentVideo.play_url"
+              ref="videoRef" />
         </div>
       </template>
     </ULandingCard>
@@ -105,10 +110,13 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-video {
-  width: 100%;
-  max-height: 600px;
-  margin: 20px 0 0;
-  border-radius: 15px;
+.video-area {
+  margin-top: 20px;
+  img, video {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 15px;
+    object-fit: fill;
+  }
 }
 </style>

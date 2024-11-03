@@ -2,6 +2,7 @@
 import { features } from '~/site/defaultConfig'
 import type { Music } from '~/types/site'
 import { VideoPlay } from '@element-plus/icons-vue'
+import {usePlayMusic} from "~/composables/effects";
 
 const musics = ref<Music[]>([])
 
@@ -26,12 +27,7 @@ const columns = [
 ]
 // 每一页的数据
 const rows = computed(() => {
-  return musics.value
-    .slice((pagination.page - 1) * pagination.pageSize, pagination.page * pagination.pageSize)
-    .map(item => {
-      Reflect.set(item, 'isPlaying', false)
-      return item
-    })
+  return musics.value.slice((pagination.page - 1) * pagination.pageSize, pagination.page * pagination.pageSize)
 })
 // 页码选择器
 const pageSizeOptions = [
@@ -47,8 +43,10 @@ const baseURL = 'http://localhost:8000'
 const { data } = await useAsyncData('get-musics', async () => {
   return $fetch('/api/musics', { baseURL })
 })
-musics.value = data.value as Music[]
-
+musics.value = (data.value as Music[]).map(item => {
+  item.isPlaying = false
+  return item;
+})
 // 全局记录播放状态
 const isPlaying = computed(() => {
   /** 只要有一个音乐正在播放，就认为全局正在播放 */
@@ -57,24 +55,47 @@ const isPlaying = computed(() => {
 
 /** 根据传入的音乐实例和canvas实例就能够实现音乐的可视化动效播放 */
 // canvas 绘制音乐动效
-const canvas = ref<HTMLCanvasElement>()
+const canvasRef = ref<HTMLCanvasElement | null>(null)
+const audioRef = ref<HTMLAudioElement | null>(null)
+const currentMusic = ref<Music>({
+  id: 0,
+  songName: '',
+  cover: '',
+  play_url: '',
+  remote_url: '',
+  lyrics: '',
+  isPlaying: false
+})
+
+onMounted(() => {
+    usePlayMusic(canvasRef.value as HTMLCanvasElement, audioRef.value as HTMLAudioElement)
+})
+
 
 const playMusic = (row: Music) => {
-  if (row.isPlaying) {
-    /**
-     * 当前行如果是播放状态，就暂停播放
-     */
-    musics.value.forEach(item => {
-      if (item.id === row.id) item.isPlaying = false
+  /**
+   * 如果播放音乐的id和当前播放的id不相同，则停掉之前的播放
+   */
+  if (row.id !== currentMusic.value.id) {
+    musics.value.some(item => {
+      if (item.id === currentMusic.value.id) {
+        item.isPlaying = false;
+        return true;
+      }
     })
-  } else {
-    musics.value.forEach(item => {
-      if (item.id === row.id) item.isPlaying = true
-    })
-    useMusicEffect(row, canvas.value!, musics)
   }
+  /**
+   * 切换点击行的音乐播放状态，并更新当前播放的音乐对象
+   */
+  row.isPlaying = !row.isPlaying;
+  currentMusic.value = row;
+  // 等待DOM更新完毕再执行，否则会报错
   nextTick(() => {
-    console.log('row', row)
+    if (currentMusic.value.isPlaying) {
+      audioRef.value?.play()
+    } else {
+      audioRef.value?.pause()
+    }
   })
 }
 </script>
@@ -89,6 +110,7 @@ const playMusic = (row: Music) => {
     <img
       style="width: 640px; height: 360px"
       src="https://picsum.photos/640/360"
+      alt="xxx"
       class="w-full rounded-2xl shadow-xl ring-1 ring-gray-300 dark:ring-gray-700" />
   </ULandingSection>
 
@@ -142,7 +164,6 @@ const playMusic = (row: Music) => {
           <UButton :icon="'hugeicons:music-note-square-02'" @click="() => playMusic(row)" v-else />
         </template>
       </UTable>
-
       <div class="flex justify-end px-3 py-6 border-t border-gray-200 dark:border-gray-700">
         <UPagination v-model="pagination.page" :page-count="pagination.pageSize" :total="musics.length" />
       </div>
@@ -159,11 +180,13 @@ const playMusic = (row: Music) => {
       v-show="isPlaying"
       width="1920"
       height="360"
-      ref="canvas"
+      ref="canvasRef"
       id="canvas"
       class="border border-stone-800 px-1 w-full bg-gray-900"></canvas>
+    <audio :src="currentMusic.play_url" ref="audioRef" class="hidden"  controls crossorigin="anonymous"></audio>
     <img
       src="https://picsum.photos/640/180"
+      alt="random_picture"
       class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
       v-show="!isPlaying" />
   </UPageHero>
