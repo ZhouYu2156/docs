@@ -20,54 +20,42 @@ export const FrontEndItems = ref<ReferenceItems>([
   },
   {
     id: 3,
-    title: 'OpenAI官网',
-    link: 'https://openai.com/',
-    icon: 'https://openai.com/favicon.ico?v=2',
-  },
-  {
-    id: 4,
     title: 'DrawDB',
     link: 'https://www.drawdb.app/',
     icon: 'https://www.drawdb.app/favicon.ico',
   },
   {
-    id: 5,
+    id: 4,
     title: 'chalk.ist',
     link: 'https://chalk.ist/',
     icon: 'https://chalk.ist/favicon.ico'
   },
   {
-    id: 6,
+    id: 5,
     title: '贝塞尔曲线绘制方式引导',
     link: 'https://bezier.method.ac/',
     icon: 'https://bezier.method.ac/favicon.ico'
   },
   {
-    id: 7,
-    title: 'AI工具网址导航列表',
-    link: 'https://aibard123.com/',
-    icon: 'https://aibard123.com/assets/images/logos/360-ai-search-icon.png'
-  },
-  {
-    id: 8,
+    id: 6,
     title: '奇迹秀',
     link: 'https://www.qijishow.com/',
     icon: 'https://www.qijishow.com/img/ico.ico'
   },
   {
-    id: 9,
+    id: 7,
     title: 'CDN资源',
     link: 'https://staticfile.net/',
     icon: 'https://staticfile.net/images/favicon.ico'
   },
   {
-    id: 10,
+    id: 8,
     title: 'CDN资源',
     link: 'https://cdnjs.com/',
     icon: 'https://cdnjs.com/_/f7a2ebfb819c118086546e481876aef6.svg'
   },
   {
-    id: 11,
+    id: 9,
     title: 'CodePen',
     link: 'https://codepen.io/',
     icon: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico'
@@ -479,6 +467,10 @@ export const ComponentLibItems = ref<ReferenceItems>([
   },
 ])
 
+/**
+ * @description
+ * CSS预处理器、CSS库、图标库
+ */
 export const CssPreprocessorItems = ref<ReferenceItems>([
   {
     id: 1,
@@ -515,6 +507,75 @@ export const CssPreprocessorItems = ref<ReferenceItems>([
     title: 'NuxtIcons',
     link: 'https://icones.js.org/',
     icon: 'https://icones.js.org/android-chrome-192x192.png',
+  },
+])
+
+export const AiItems = ref<ReferenceItems>([
+  {
+    id: 1,
+    title: 'AI工具网址大全',
+    link: 'https://aibard123.com/',
+    icon: 'https://aibard123.com/assets/images/logos/360-ai-search-icon.png'
+  },
+  {
+    id: 2,
+    title: 'Hugging Face',
+    link: 'https://huggingface.co/',
+    icon: 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg'
+  },
+  {
+    id: 3,
+    title: 'Ollama',
+    link: 'https://ollama.com/',
+    icon: 'https://ollama.com/public/ollama.png'
+  },
+  {
+    id: 4,
+    title: '豆包',
+    link: 'https://www.doubao.com/',
+    icon: 'https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/logo-doubao-overflow.png'
+  },
+  {
+    id: 5,
+    title: 'OpenAI官网',
+    link: 'https://openai.com/',
+    icon: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
+  },
+  {
+    id: 6,
+    title: 'ChatGPT',
+    link: 'https://chatgpt.com/',
+    icon: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg'
+  },
+  {
+    id: 7,
+    title: '天工AI',
+    link: 'https://www.tiangong.cn/',
+    icon: 'https://static.tiangong.cn/wwwsite/assets/tab-logo-B0tzp8eR.png'
+  },
+  {
+    id: 8,
+    title: 'Pulid',
+    link: 'https://yunyingmenghai.feishu.cn/wiki/N5XAwFxaBiEhMfk0jGMcqI9Vnve?view=vew8jTRKbz&table=tblCKq0uVrsY6QdN',
+    icon: 'https://lf-scm-cn.feishucdn.com/ccm/pc/web/resource/bear/src/common/assets/favicons/icon_file_doc_nor-32x32.8cb0fef16653221e74b9.png'
+  },
+  {
+    id: 9,
+    title: 'Lobehub',
+    link: 'https://chat-preview.lobehub.com/',
+    icon: 'https://chat-preview.lobehub.com/icons/icon-192x192.png'
+  },
+  {
+    id: 10,
+    title: 'AI魔法',
+    link: 'https://www.msbd123.com/',
+    icon: 'https://cdn.msbd123.com/wp-content/uploads/2023/03/baidilogo.png'
+  },
+  {
+    id: 11,
+    title: 'Pika',
+    link: 'https://www.msbd123.com/',
+    icon: 'https://pika.art/favicon.ico'
   },
 ])
 

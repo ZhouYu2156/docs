@@ -17,7 +17,8 @@ import {FrontEndItems,
         LinuxItems, 
         BlogItems,
         FormatItems,
-        CssPreprocessorItems } from '../../../.vitepress/configuration/modules/sources'
+        CssPreprocessorItems,
+        AiItems } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册
@@ -51,6 +52,9 @@ import {FrontEndItems,
 
 ## 开源组件库
 <References :items="ComponentLibItems" />
+
+## 人工智能
+<References :items="AiItems"/>
 
 ## Python 技术
 <References :items="PythonItems"/>
