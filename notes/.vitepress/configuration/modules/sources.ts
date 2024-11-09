@@ -574,8 +574,26 @@ export const AiItems = ref<ReferenceItems>([
   {
     id: 11,
     title: 'Pika',
-    link: 'https://www.msbd123.com/',
+    link: 'https://pika.art/',
     icon: 'https://pika.art/favicon.ico'
+  },
+  {
+    id: 12,
+    title: 'AI工具导航',
+    link: 'https://www.aig123.com/',
+    icon: 'https://www.aig123.com/wp-content/themes/onenav/images/favicon.png'
+  },
+  {
+    id: 13,
+    title: 'Luma AI',
+    link: 'https://lumalabs.ai/dream-machine',
+    icon: 'https://cdn-luma.com/public/captures.lumalabs.ai/images/logo.svg'
+  },
+  {
+    id: 14,
+    title: 'Domo AI',
+    link: 'https://domoai.app/',
+    icon: 'https://cdn.prod.website-files.com/652242395f6164bbe183da35/65d865c66c071ed1af11d0cd_domoai_32.png'
   },
 ])
 
