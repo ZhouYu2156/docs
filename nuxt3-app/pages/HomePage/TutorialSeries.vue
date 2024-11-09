@@ -41,7 +41,7 @@ const currentVideo = ref<TutorialVideo>({
 })
 
 /** 请求数据 */
-const baseURL = 'http://localhost:8000'
+const baseURL = 'http://zhouyu2156.cn:8000'
 /** 获取所有视频 */
 const { data } = await useAsyncData('get-videos', () => {
   return $fetch('/api/videos', { baseURL })

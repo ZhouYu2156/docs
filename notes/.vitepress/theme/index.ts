@@ -6,6 +6,7 @@ import MusicPlayer from './components/MusicPlayer.vue'
 import Tutorial from './components/Tutorial.vue'
 import './index.scss'
 
+
 export default {
 	extends: DefaultTheme,
 	Layout: () => {
@@ -59,7 +60,7 @@ export default {
 				}),
 		})
 	},
-	enhanceApp({ app, router, siteData }) {
+	enhanceApp ({ app, router, siteData }) {
 		// 注册自定义全局组件
 		app.component('Tutorial', Tutorial)
 	},

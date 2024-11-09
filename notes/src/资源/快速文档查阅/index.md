@@ -16,12 +16,13 @@ import {FrontEndItems,
         PythonItems, 
         LinuxItems, 
         BlogItems,
-        FormatItems } from '../../../.vitepress/configuration/modules/sources'
+        FormatItems,
+        CssPreprocessorItems } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册
 
-## 辅助工具
+## 在线辅助工具
 <References :items="FrontEndItems" />
 
 ## JavaScript & TypeScript
@@ -35,6 +36,9 @@ import {FrontEndItems,
 
 ## 前端动画库
 <References :items="AnimationLibItems" />
+
+## CSS库 & 图标库 & 预处理器
+<References :items="CssPreprocessorItems"/>
 
 ## Vue 全家桶
 <References :items="VueItems"/>

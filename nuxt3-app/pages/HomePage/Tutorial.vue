@@ -14,7 +14,7 @@ interface Category {
 const categories = ref<Category[]>([])
 
 /** 请求数据 */
-const baseURL = 'http://localhost:8000'
+const baseURL = 'http://zhouyu2156.cn:8000'
 const { data } = await useAsyncData('get-categories', async () => {
   return $fetch('/api/categories', { baseURL })
 })

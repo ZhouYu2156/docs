@@ -39,7 +39,7 @@ const pageSizeOptions = [
 ]
 
 // 请求数据
-const baseURL = 'http://localhost:8000'
+const baseURL = 'http://zhouyu2156.cn:8000'
 const { data } = await useAsyncData('get-musics', async () => {
   return $fetch('/api/musics', { baseURL })
 })
