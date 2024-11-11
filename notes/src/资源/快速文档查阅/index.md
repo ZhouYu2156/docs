@@ -18,7 +18,8 @@ import {FrontEndItems,
         BlogItems,
         FormatItems,
         CssPreprocessorItems,
-        AiItems } from '../../../.vitepress/configuration/modules/sources'
+        AiItems,
+        CompilerPreProcessorItems } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册
@@ -46,6 +47,9 @@ import {FrontEndItems,
 
 ## React 全家桶
 <References :items="ReactItems"/>
+
+## 高性能编译工具
+<References :items="CompilerPreProcessorItems"/>
 
 ## 代码规范工具
 <References :items="FormatItems"/>

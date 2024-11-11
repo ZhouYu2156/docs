@@ -510,6 +510,29 @@ export const CssPreprocessorItems = ref<ReferenceItems>([
   },
 ])
 
+/**
+ * @description
+ * 编译器预处理器
+ */
+export const CompilerPreProcessorItems = ref<ReferenceItems>([
+  {
+    id: 1,
+    title: 'Rust',
+    link: 'https://www.rust-lang.org/',
+    icon: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg',
+  },
+  {
+    id: 2,
+    title: 'Rust中文网',
+    link: 'https://rust.p2hp.com/',
+    icon: 'https://rust.p2hp.com/static/images/rust-logo-blk.svg',
+  },
+])
+
+/**
+ * @description
+ * AI工具大全
+ */
 export const AiItems = ref<ReferenceItems>([
   {
     id: 1,

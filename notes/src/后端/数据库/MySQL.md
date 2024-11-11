@@ -1,20 +1,5 @@
 # MySQL 数据库
 
-::: info 中文自我介绍
-大家好，我叫周玉，今年二十五岁，现居浙江省杭州市，祖籍湖南省道县。目前我正在找一个后端开发工程师的岗位，我掌握的技术有django、flask框架，并且熟练使用python编程，了解常用的数据结构与算法基础，具有扎实的计算机基础。
-
-在个人品质方面，对待工作积极认真、负责，并且乐于助人。曾在团队项目开发中，作为项目组组长，我积极跟进项目进度，通过与团队成员的研讨帮助小组成员攻克技术难题，使得项目取得圆满成功。
-
-在个人习惯方面，积极上进且持续学习。关注前沿技术，扩展自己的技术栈，目前掌握Vue、React和与之配套的工具库的基本应用，对python人工智能应用和服务器运维管理都有一定的应用能力，你知道的，毕竟作为我们技术码农，计算机的开发岗位肯定是需要掌握从开发到部署一条龙的基本服务技术的。
-:::
-::: info 英文版本
-Hello everyone, my name is Zhou Yu, a 25-year-old backend developer residing in Hangzhou, Zhejiang Province, with ancestral roots in Dao County, Hunan Province. I am actively seeking a backend development engineer position. My technical expertise includes proficiency in the django and flask frameworks, along with extensive Python programming skills. I have a solid grasp of commonly used data structures and algorithm fundamentals, along with a robust foundation in computer science.
-
-In terms of personal qualities, I am proactive, responsible, and eager to assist others. As the leader of a team project, I diligently monitored progress and guided team members through technical challenges, ensuring the project's successful completion.
-
-Regarding personal habits, I am highly motivated and committed to continuous learning. I stay abreast of cutting-edge technologies, broadening my technical expertise to include basic proficiency in Vue and React, as well as their associated tool libraries. Additionally, I possess considerable capabilities in Python artificial intelligence applications and server operations, essential skills for a computer developer in a development-to-deployment service technology role.
-:::
-
 ## 基础篇
 
 ### MySQL 概述

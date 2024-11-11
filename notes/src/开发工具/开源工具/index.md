@@ -1,4 +1,4 @@
-# 其它工具
+# 实用辅助工具
 
 ## WinRar 解压缩工具
 ::: tip 推荐：
@@ -20,11 +20,15 @@
 
 
 ## Win11 右键菜单还原成 Win10
-::: tip 提示
 
 - 按住`Shift + 右键`可以使用Win10风格的右键菜单
 
+::: tip 提示
+- 一键还原`win10右键菜单`工具：[点我下载](/assets/Win11系统右键菜单还原工具.zip)
+- 参考来源：[来自Win11系统右键菜单还原工具](https://yunyingmenghai.feishu.cn/wiki/MjBZwPw7BiiRlekiwLjcF0Ctn1V?view=vew8jTRKbz&table=tblCKq0uVrsY6QdN)
+
 :::
+
 
 ## windows 本地安装人工智能
 ::: tip 教程
@@ -33,7 +37,7 @@
 
 > Github 网址：[大语言模型运行工具下载](https://github.com/ollama/ollama)
 
-> 下载并安装完成后，终端输入 `ollama run llama2` 运行 `llama2` 大模型，由于首次没有安装，所以它会去下载该大语言模型，下载完成之后就可以运行起来了。还有其他大语言模型，可以在官网看看。
+> 参考本站另一篇文章： [如何使用ollama本地安装人工智能](/后端/人工智能/Ollama)
 
 :::
 
@@ -226,3 +230,4 @@
 }
 ```
 :::
+
