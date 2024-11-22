@@ -463,3 +463,84 @@ export class UserService {
 ```
 :::
 
+
+## 依赖注入
+
+::: info 基本概念
+在 NestJS 中，依赖注入（Dependency Injection，简称 DI）是一种设计模式，它用于管理组件（如类）之间的依赖关系。其核心思想是将组件所依赖的其他组件（或服务）的创建和管理交给外部容器（在 NestJS 中是一个依赖注入容器），而不是由组件自身来创建和管理这些依赖。
+:::
+
+::: code-group
+
+```ts [user.module.ts]
+import { Module } from '@nestjs/common'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { User } from './entities/user.entity'
+import { UserController } from './user.controller'
+import { UserService } from './user.service'
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([User]),
+  ],
+  controllers: [UserController,],
+  providers: [
+    // 提供业务逻辑服务
+    {
+      provide: 'user',
+      useClass: UserService
+    },
+    // 提供自定义值
+    {
+      provide: 'database-config',
+      useValue: {
+        host: 'localhost',
+        port: 3000,
+        username: 'root',
+        password: '123456',
+        database: 'test'
+      }
+    },
+    // 提供工厂函数
+    {
+      provide: 'myFactory',
+      useFactory: () => {
+        console.log('this is myFactory.')
+        return ['a', 'b', 'c', 'e', 'f', 'g']
+      }
+    }
+  ]
+})
+export class UserModule { }
+```
+
+```ts [user.controller.ts]
+import { Body, Controller, Delete, Get, Inject, Param, Post, Put } from '@nestjs/common'
+import { User } from './entities/user.entity'
+import { UserService } from './user.service'
+
+
+@Controller('users')
+export class UserController {
+  constructor(
+    @Inject('user') private readonly userService: UserService,  // [!code ++]
+    @Inject('database-config') private readonly config: Record<string, string | number>,  // [!code ++]
+    @Inject('myFactory') private readonly myFactory: string[],  // [!code ++]
+  ) { }
+
+  /** 使用自定义值 */
+  @Get('config')
+  getConfig () {
+    return this.config
+  }
+
+  /** 使用工厂函数返回值 */
+  @Get('factory')
+  getFactory () {
+    return this.myFactory
+  }
+
+  // ...
+}
+```
+:::
