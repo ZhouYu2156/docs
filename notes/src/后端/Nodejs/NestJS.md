@@ -544,3 +544,96 @@ export class UserController {
 }
 ```
 :::
+
+
+
+## 中间件
+
+
+
+### 局部中间件
+
+- 快速生成中间件模块
+
+```bash
+$ nest g mi counter --no-spec
+```
+
+
+
+- 在`*.module.ts`中引入使用`局部中间件`
+
+```ts
+// other something...
+export class UserModule implements NestModule {
+  configure (consumer: MiddlewareConsumer) {  // 配置中间件
+    consumer.apply(CounterMiddleware).forRoutes('users')	// 针对哪个路由起作用
+    // consumer.apply(CounterMiddleware).forRoutes({ path: 'users', method: RequestMethod.GET })	// 也可以让中间件针对某一种请求方法生效
+  }
+}
+```
+
+
+
+### 全局中间件
+
+
+
+- 在`main.ts`的`app`对象身上注册`全局中间件`
+
+```ts
+// 全局中间件的业务逻辑
+function globalMiddleware (req: any, res: any, next: () => void) {
+  console.log('Already in globalMiddleware...')
+  next()
+}
+
+async function bootstrap () {
+  const app = await NestFactory.create(AppModule)
+  app.use(globalMiddleware) // 使用全局中间件	// ![code++]
+  // 可以添加API全局前缀
+  app.setGlobalPrefix('api')
+  await app.listen(3000)
+}
+bootstrap()
+```
+
+
+
+## 解决跨域问题
+
+
+
+- 按照第三方包
+
+```bash
+$ npm install cors
+$ npm i @types/cors
+```
+
+
+
+- `main.ts`注册全局中间件
+
+```ts
+import * as cors from 'cors'
+
+async function bootstrap () {
+  const app = await NestFactory.create(AppModule)
+  app.use(cors())
+  // ...
+}
+```
+
+
+
+## 模块化
+
+```bash
+$ nest g res posts
+```
+
+
+
+
+

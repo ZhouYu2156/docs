@@ -4,32 +4,41 @@
 
 |               插件名称               |                           功能                            |
 | :----------------------------------: | :-------------------------------------------------------: |
-|             Monokai Pro              |                         界面主题                          |
-|         Atom One Dark Theme          |                   舒适的主题样式(⭐⭐⭐⭐⭐)                   |
-|             vscode-icons             |               好看的 VSCode 文件图标(⭐⭐⭐⭐)                |
+|   Chinese (Simplified) (简体中文)    |               VSCode 界面简体中文插件(⭐⭐⭐⭐)               |
+|             Monokai Pro              |                         舒适美观的主题(⭐⭐⭐⭐⭐)     |
 |         Material Icon Theme          |                 美观的目录文件图标(⭐⭐⭐⭐⭐)                 |
-|               CodeSnap               |                 漂亮的代码截图工具(⭐⭐⭐⭐)                  |
-|            Auto Close Tag            |                       标签自动闭合                        |
-|           Auto Rename Tag            |                     成对标签联动修改                      |
-|          Path Intellisense           |                       智能路径提示                        |
+|          Path Intellisense           |                       智能路径提示<sup style="color: red;">*</sup>      |
+|             Live Server              |                   右键可快速开启服务器<sup style="color: red;">*</sup>      |
+|            Auto Close Tag            |       标签自动闭合<sup style="color: red;">*</sup>        |
+|           Auto Rename Tag            |                     成对标签联动修改<sup style="color: red;">*</sup>  |
 |           HTML CSS Support           |                     HTML CSS 智能提示                     |
+| One Dark Pro | 美观的主题样式 |
+| Project Manager | 常开项目列表管理器,在VSCode中可以快速切换项目 |
+| REST Client | 简洁易用的HTTP接口测试工具 |
+| Symbols | 简洁的文件图标美化 |
+| Tailwind CSS intelliSense | Tailwind CSS 类名智能提示 |
+|         Atom One Dark Theme          |                   舒适的主题样式                   |
+|             vscode-icons             |               好看的 VSCode 文件图标                |
+|               CodeSnap               |                 漂亮的代码截图工具                  |
+| Better Comments | 高亮特殊的注释内容 |
+| Comment Translate | 注释文档翻译 |
+| IntelliCode | 只能提示内置方法，猜你大概率会用的，有星星标识 |
+| JSDoc Generator | JS文档注释快捷生成 |
+| JSON to TS | 将剪贴板或者选中的JSON内容转换为TS类型、接口 |
 |            SCSS Formatter            |                      SCSS代码格式化                       |
 |          SCSS IntelliSense           |                     SCSS代码智能提示                      |
 |          Live Sass Compiler          |          SCSS实时编译（直接启动即可，超级方便）           |
 |             Remote - SSH             | 远程连接SSH插件（VSCode直接可以操作远程服务器的项目代码） |
-|             Live Server              |                   右键可快速开启服务器                    |
 |               CodeGeeX               |               人工智能代码助手（辅助开发）                |
 |            TONGYI Lingma             |            人工智能代码助手（辅助开发）(⭐⭐⭐⭐)             |
 |              Tabnine AI              |               人工智能代码助手（辅助开发）                |
-|        Bracket Pair Colorizer        |            括号成对色彩化（已经内置于 VSCode）            |
 |      Prettier - Code formatter       |                 优雅的代码自动格式化插件                  |
 |             Vue Official             |                     Vue 项目开发插件                      |
 |          vitepress snippets          |                     vitepress代码片段                     |
 |         Markdown All in One          |                     Markdown语法高亮                      |
 |    JavaScript (ES6) code snippets    |                 ES6 语法快捷键和智能提示                  |
 | StandardJS JavaScript Standard Style |                 ES6 语法快捷键和智能提示                  |
-|   Chinese (Simplified) (简体中文)    |               VSCode 界面简体中文插件(⭐⭐⭐⭐)               |
-|              JSON Crack              |                 JSON可视化图形展示(⭐⭐⭐⭐⭐)                 |
+|              JSON Crack              |                 JSON可视化图形展示                 |
 
 ## 二、常用快捷键
 
@@ -68,3 +77,4 @@
 > 推荐：[快捷键大全](https://blog.csdn.net/Joe0217/article/details/80950477/)
 
 :::
+
