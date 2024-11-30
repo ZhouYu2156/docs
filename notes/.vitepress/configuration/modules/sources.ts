@@ -60,6 +60,12 @@ export const FrontEndItems = ref<ReferenceItems>([
     link: 'https://codepen.io/',
     icon: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico'
   },
+  {
+    id: 10,
+    title: '实用在线工具',
+    link: 'https://tools.jb51.net/',
+    icon: 'https://tools.jb51.net/favicon.ico'
+  },
 ])
 
 /**
@@ -341,6 +347,12 @@ export const VueItems = ref<ReferenceItems>([
     link: 'https://vueuse.org/',
     icon: 'https://vueuse.org/favicon.svg',
   },
+  {
+    id: 11,
+    title: 'Element Plus',
+    link: 'https://element-plus.org/zh-CN/',
+    icon: 'https://element-plus.org/images/element-plus-logo-small.svg',
+  },
 ])
 
 /**
@@ -443,24 +455,18 @@ export const ComponentLibItems = ref<ReferenceItems>([
   },
   {
     id: 2,
-    title: 'Element Plus',
-    link: 'https://element-plus.org/zh-CN/',
-    icon: 'https://element-plus.org/images/element-plus-logo-small.svg',
-  },
-  {
-    id: 3,
     title: 'UnoCSS',
     link: 'https://unocss.dev/',
     icon: 'https://unocss.dev/logo.svg',
   },
   {
-    id: 4,
+    id: 3,
     title: 'UnoCSS中文网',
     link: 'https://unocss.jiangruyi.com/',
     icon: 'https://unocss.jiangruyi.com/logo.svg',
   },
   {
-    id: 5,
+    id: 4,
     title: 'LayUI',
     link: 'http://layui.apixx.net/index.html',
     icon: 'https://img.vcdisgd.com/p/202107/d2f3c041ef96a6d9.jpg',
@@ -527,6 +533,13 @@ export const CompilerPreProcessorItems = ref<ReferenceItems>([
     link: 'https://rust.p2hp.com/',
     icon: 'https://rust.p2hp.com/static/images/rust-logo-blk.svg',
   },
+  {
+    id: 3,
+    title: 'Webpack中文网',
+    link: 'https://www.webpackjs.com/',
+    icon: 'https://www.webpackjs.com/icon_192x192.png',
+  },
+
 ])
 
 /**
@@ -648,5 +661,45 @@ export const BlogItems = ref<ReferenceItems>([
     title: 'Hello 算法',
     link: 'https://www.hello-algo.com/',
     icon: 'https://www.hello-algo.com/assets/images/logo.svg',
+  },
+  {
+    id: 4,
+    title: '印记中文文档✨️',
+    link: 'https://docschina.org/',
+    icon: 'https://docschina.org/favicon.svg',
+  },
+])
+
+/** 优秀学习网站 */
+export const LeaningWebsites = ref<ReferenceItems>([
+  {
+    id: 1,
+    title: 'B站',
+    link: 'https://www.bilibili.com/',
+    icon: 'https://tukuimg.bdstatic.com/cms/2dfea3b61b924ab4fd61bbd3119839ac.jpeg'
+  },
+  {
+    id: 2,
+    title: '面试鸭',
+    link: 'https://www.mianshiya.com/',
+    icon: '	https://www.mianshiya.com/_next/image?url=%2Flogo.png&w=32&q=75'
+  },
+  {
+    id: 3,
+    title: 'LeetCode',
+    link: 'https://leetcode.cn/',
+    icon: 'https://leetcode.cn/favicon.ico'
+  },
+  {
+    id: 4,
+    title: '掘金',
+    link: 'https://juejin.cn/',
+    icon: 'https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/6c61ae65d1c41ae8221a670fa32d05aa.svg'
+  },
+  {
+    id: 5,
+    title: 'Github',
+    link: 'https://github.com/',
+    icon: 'https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png'
   },
 ])

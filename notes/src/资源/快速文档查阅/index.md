@@ -19,7 +19,8 @@ import {FrontEndItems,
         FormatItems,
         CssPreprocessorItems,
         AiItems,
-        CompilerPreProcessorItems } from '../../../.vitepress/configuration/modules/sources'
+        CompilerPreProcessorItems,
+        LeaningWebsites } from '../../../.vitepress/configuration/modules/sources'
 </script>
 
 # 快速文档参考手册
@@ -68,3 +69,6 @@ import {FrontEndItems,
 
 ## 优秀博客
 <References :items="BlogItems"/>
+
+## 优质学习网站
+<References :items="LeaningWebsites"/>
