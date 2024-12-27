@@ -63,8 +63,32 @@ export const FrontEndItems = ref<ReferenceItems>([
   {
     id: 10,
     title: '实用在线工具',
+    link: 'https://www.jyshare.com/',
+    icon: 'https://static.jyshare.com/images/c-runoob-logo.ico'
+  },
+  {
+    id: 11,
+    title: '网页配色',
+    icon: 'https://www.grabient.com/favicon.ico',
+    link: 'https://www.grabient.com/'
+  },
+  {
+    id: 12,
+    title: '脚本之家实用工具大全',
     link: 'https://tools.jb51.net/',
-    icon: 'https://tools.jb51.net/favicon.ico'
+    icon: 'https://tools.jb51.net/favicon.ico',
+  },
+  {
+    id: 13,
+    title: 'EmojiAll',
+    link: 'https://www.emojiall.com/',
+    icon: 'https://www.emojiall.com/favicon.ico',
+  },
+  {
+    id: 14,
+    title: '开发者文档',
+    link: 'https://devdocs.io/',
+    icon: 'https://devdocs.io/favicon.ico',
   },
 ])
 
@@ -631,6 +655,31 @@ export const AiItems = ref<ReferenceItems>([
     link: 'https://domoai.app/',
     icon: 'https://cdn.prod.website-files.com/652242395f6164bbe183da35/65d865c66c071ed1af11d0cd_domoai_32.png'
   },
+  {
+    id: 15,
+    title: '即梦AI',
+    link: 'https://jimeng.jianying.com/',
+    icon: 'https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v5.ico'
+  },
+  {
+    id: 16,
+    title: '可灵AI',
+    link: 'https://klingai.kuaishou.com/',
+    icon: 'https://ali2.a.kwimgs.com/kos/nlav10378/aiwp/assets/point-unit-B4VVBG6I.png'
+  },
+  {
+    id: 17,
+    title: '虚拟信用卡',
+    link: 'https://www.laodengai.com/',
+    icon: 'https://open-ai-blog.oss-cn-nanjing.aliyuncs.com/img/202403180909475.jpg'
+  },
+  {
+    id: 18,
+    title: 'Sora',
+    link: 'https://sora.com/explore/recent',
+    icon: 'https://sora.com/favicon-light.ico'
+  },
+
 ])
 
 /**
