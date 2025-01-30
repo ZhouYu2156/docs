@@ -10,7 +10,8 @@ title: nodejs 的使用
 
 ::: tip 提示：
 
-> 关于安装后的必要配置：[教程](https://blog.csdn.net/qq_48485223/article/details/122709354)
+> - 关于安装后的必要配置：[教程](https://blog.csdn.net/qq_48485223/article/details/122709354)
+> - 参考2：[教程](https://blog.csdn.net/weixin_44259233/article/details/139743886)
 
 :::
 

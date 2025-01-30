@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'vitepress'
 import { autoRenderNavbar } from '../../tools'
 
-export const nav: DefaultTheme.NavItem[] = autoRenderNavbar() /*[
+export const nav = autoRenderNavbar() as DefaultTheme.NavItem[] /*[
   {
     text: "首页",
     link: "/",

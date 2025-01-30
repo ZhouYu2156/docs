@@ -2,14 +2,14 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme, { VPDocAsideSponsors } from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import MusicPlayer from './components/MusicPlayer.vue'
 
 const { isDark } = useData()
 
 const enableTransitions = () =>
-  'startViewTransition' in document &&
-  window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+  'startViewTransition' in document && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
 provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   if (!enableTransitions()) {
@@ -19,10 +19,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
   const clipPath = [
     `circle(0px at ${x}px ${y}px)`,
-    `circle(${Math.hypot(
-      Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y)
-    )}px at ${x}px ${y}px)`
+    `circle(${Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))}px at ${x}px ${y}px)`,
   ]
 
   await document.startViewTransition(async () => {
@@ -35,14 +32,64 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     {
       duration: 300,
       easing: 'ease-in',
-      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
-    }
+      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`,
+    },
   )
 })
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <DefaultTheme.Layout>
+    <template #nav-bar-content-after>
+      <MusicPlayer />
+    </template>
+    <template #aside-ads-before>
+      <VPDocAsideSponsors
+        :data="[
+          {
+            name: 'VueMastery',
+            img: 'https://sponsors.vuejs.org/images/vuemastery.avif',
+            url: 'https://www.vuemastery.com/',
+          },
+          {
+            name: 'VueSchool',
+            img: 'https://sponsors.vuejs.org/images/vueschool.avif',
+            url: 'https://vueschool.io/?utm_source=Vuejs.org&utm_medium=Banner&utm_campaign=Sponsored%20Banner&utm_content=V1',
+          },
+          {
+            name: 'Vehikl',
+            img: 'https://sponsors.vuejs.org/images/vehikl.avif',
+            url: 'https://vehikl.com/',
+          },
+          {
+            name: 'Passionate People',
+            img: 'https://sponsors.vuejs.org/images/passionate_people.avif',
+            url: 'https://passionatepeople.io/',
+          },
+        ]"
+        :size="'xmini'"
+        :mode="'aside'"
+        :tier="'赞助商'"
+        style="margin-bottom: 1rem" />
+    </template>
+    <template #aside-ads-after>
+      <VPDocAsideSponsors
+        :data="[
+          {
+            name: 'Vehikl',
+            img: 'https://sponsors.vuejs.org/images/vehikl.avif',
+            url: 'https://vehikl.com/',
+          },
+          {
+            name: 'Passionate People',
+            img: 'https://sponsors.vuejs.org/images/passionate_people.avif',
+            url: 'https://passionatepeople.io/',
+          },
+        ]"
+        :size="'mini'"
+        :mode="'normal'" />
+    </template>
+  </DefaultTheme.Layout>
 </template>
 
 <style>
