@@ -5,12 +5,15 @@ import { h } from 'vue'
 import Image from './components/Image.vue'
 import MusicPlayer from './components/MusicPlayer.vue'
 import './index.scss'
+import Layout from './Layout.vue'
+import ThemeTransitionLayout from './ThemeTransitionLayout.vue'
 
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
-    return h(DefaultTheme.Layout, null, {
+    // DefaultTheme.Layout
+    return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'nav-bar-content-after': () => h(MusicPlayer),
       'aside-ads-before': () =>
